@@ -313,9 +313,9 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
             analytics.trackEvent('develop', 'save wysiwyg', $scope.mode, 1)
 
-        uploadEnd = (name, url) ->
+        uploadEnd = (name, url, sha1="") ->
             if taiga.isImage(name)
-                mediumInstance.pasteHTML("<img src='" + url + "' /><br/>")
+                mediumInstance.pasteHTML("<img alt='" + name + "' src='" + sha1 + "' title='" + name + "' /><br/>")
             else
                 name = $('<div/>').text(name).html()
                 mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
@@ -481,11 +481,11 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
             mediumInstance.subscribe "editableClick", (e) ->
                 r = new RegExp('^(?:[a-z]+:)?//', 'i')
 
-                if e.target.href 
+                if e.target.href
                     if r.test(e.target.getAttribute('href')) || e.target.getAttribute('target') == '_blank'
                         e.stopPropagation()
-                        window.open(e.target.href)                                                 
-                    else 
+                        window.open(e.target.href)
+                    else
                         $location.url(e.target.href)
 
             mediumInstance.subscribe 'editableDrop', (event) ->
@@ -514,7 +514,7 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 wysiwygCodeHightlighterService.addHightlighter(mediumInstance.elements[0])
                 refreshCodeBlocks(mediumInstance)
 
-        $(editorMedium[0]).on 'mousedown', (e) -> 
+        $(editorMedium[0]).on 'mousedown', (e) ->
             if e.target.href
                 e.preventDefault()
                 e.stopPropagation()
@@ -522,7 +522,7 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 $scope.$applyAsync () ->
                     if !$scope.editMode
                         setEditMode(true)
-                        refreshCodeBlocks(mediumInstance)                   
+                        refreshCodeBlocks(mediumInstance)
 
         $(editorMedium[0]).on 'dblclick', 'pre', (e) ->
             $scope.$applyAsync () ->
