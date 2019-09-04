@@ -320,6 +320,10 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 name = $('<div/>').text(name).html()
                 mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
 
+        uploadEndMarkdown = (name, url, sha1) ->
+            if taiga.isImage(name)
+                $scope.markdown += "![#{name}](#{sha1} \"#{name}\")"
+
         isOutdated = () ->
             store = $storage.get($scope.storageKey)
 
@@ -532,6 +536,16 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
                 $scope.currentCodeLanguage = wysiwygCodeHightlighterService.getLanguageInClassList(codeBlockSelected.classList)
                 $scope.code = codeBlockSelected.innerText
+
+        $(editorMarkdown).on "dragover", (e) ->
+            e.preventDefault()
+
+        $(editorMarkdown).on "dragenter", (e) ->
+            e.preventDefault()
+
+        $(editorMarkdown).on "drop", (e) ->
+            e.preventDefault()
+            $scope.onUploadFile({files: e.originalEvent.dataTransfer.files, cb: uploadEndMarkdown})
 
         unwatch = $scope.$watch 'content', (content) ->
             if !_.isUndefined(content)
