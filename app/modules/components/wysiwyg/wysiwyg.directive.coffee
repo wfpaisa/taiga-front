@@ -315,16 +315,21 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
         uploadEnd = (name, url, sha1="") ->
             if taiga.isImage(name)
-                mediumInstance.pasteHTML("<img alt='" + name + "' src='" + sha1 + "' title='" + name + "' /><br/>")
+                # mediumInstance.pasteHTML("<img alt='" + name + "' src='" + url + "' title='" + name + "' /><br/>")
+                $scope.markdown += "\n![#{name}](#{url} \"#{name}\")\n"
             else
-                name = $('<div/>').text(name).html()
-                mediumInstance.pasteHTML("<a target='_blank' href='" + sha1 + "'>" + name + "</a><br/>")
+                # name = $('<div/>').text(name).html()
+                # mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
+                $scope.markdown += "\n[#{name}](#{url})\n"
+
+            setHtmlMedium($scope.markdown)
+
 
         uploadEndMarkdown = (name, url, sha1) ->
             if taiga.isImage(name)
-                $scope.markdown += "![#{name}](#{sha1} \"#{name}\")"
+                $scope.markdown += "\n![#{name}](#{url} \"#{name}\")\n"
             else
-                $scope.markdown += "[#{name}](#{sha1})"
+                $scope.markdown += "\n[#{name}](#{url})\n"
 
         isOutdated = () ->
             store = $storage.get($scope.storageKey)

@@ -38,7 +38,6 @@ ItemWysiwyg = ($modelTransform, $rootscope, $confirm, attachmentsFullService, $t
 
         uploadFile = (file, cb) ->
             return attachmentsFullService.addAttachment($scope.project.id, $scope.item.id, $attrs.type, file).then (result) ->
-                console.log(result);
                 cb(result.getIn(['file', 'name']), result.getIn(['file', 'url']), result.getIn(['file', 'sha1']))
 
         $scope.uploadFiles = (files, cb) ->
