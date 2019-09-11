@@ -313,19 +313,20 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
             analytics.trackEvent('develop', 'save wysiwyg', $scope.mode, 1)
 
-        uploadEnd = (name, url, sha1="") ->
+        uploadEnd = (name, url, id=null) ->
+            if id
+                url = "#{url}#_taiga-refresh=#{id}"
+
             if taiga.isImage(name)
-                # mediumInstance.pasteHTML("<img alt='" + name + "' src='" + url + "' title='" + name + "' /><br/>")
-                $scope.markdown += "\n![#{name}](#{url} \"#{name}\")\n"
+                mediumInstance.pasteHTML("<img alt='" + name + "' src='" + url + "' title='" + name + "' /><br/>")
             else
-                # name = $('<div/>').text(name).html()
-                # mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
-                $scope.markdown += "\n[#{name}](#{url})\n"
+                name = $('<div/>').text(name).html()
+                mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
 
-            setHtmlMedium($scope.markdown)
+        uploadEndMarkdown = (name, url, id=null) ->
+            if id
+                url = "#{url}#_taiga-refresh=#{id}"
 
-
-        uploadEndMarkdown = (name, url, sha1) ->
             if taiga.isImage(name)
                 $scope.markdown += "\n![#{name}](#{url} \"#{name}\")\n"
             else
