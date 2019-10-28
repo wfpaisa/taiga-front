@@ -100,6 +100,11 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
                 pre.parentNode.insertBefore(p, pre.nextSibling)
 
+    refreshAttachments = (mediumInstance) ->
+        promise = wysiwygService.refreshAttachmentURL(mediumInstance.getContent())
+        promise.then (html) =>
+            mediumInstance.setContent(html)
+
     AlignRightButton = MediumEditor.extensions.button.extend({
         name: 'rtl',
         init: () ->
@@ -313,12 +318,25 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
             analytics.trackEvent('develop', 'save wysiwyg', $scope.mode, 1)
 
-        uploadEnd = (name, url) ->
+        uploadEnd = (name, url, type, id=null) ->
+            if id
+                url = "#{url}#_taiga-refresh=#{type}:#{id}"
+
             if taiga.isImage(name)
-                mediumInstance.pasteHTML("<img src='" + url + "' /><br/>")
+                mediumInstance.pasteHTML("<img alt='" + name + "' src='" + url + "' title='" + name + "' /><br/>")
             else
                 name = $('<div/>').text(name).html()
                 mediumInstance.pasteHTML("<a target='_blank' href='" + url + "'>" + name + "</a><br/>")
+
+        uploadEndMarkdown = (name, url, type, id=null) ->
+            if id
+                url = "#{url}#_taiga-refresh=#{type}:#{id}"
+
+
+            if taiga.isImage(name)
+                $scope.markdown += "\n![#{name}](#{url} \"#{name}\")\n"
+            else
+                $scope.markdown += "\n[#{name}](#{url})\n"
 
         isOutdated = () ->
             store = $storage.get($scope.storageKey)
@@ -473,6 +491,8 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 }
             })
 
+            refreshAttachments(mediumInstance)
+
             $scope.changeMarkdown = throttleChange
 
             mediumInstance.subscribe 'editableInput', (e) ->
@@ -481,11 +501,11 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
             mediumInstance.subscribe "editableClick", (e) ->
                 r = new RegExp('^(?:[a-z]+:)?//', 'i')
 
-                if e.target.href 
+                if e.target.href
                     if r.test(e.target.getAttribute('href')) || e.target.getAttribute('target') == '_blank'
                         e.stopPropagation()
-                        window.open(e.target.href)                                                 
-                    else 
+                        window.open(e.target.href)
+                    else
                         $location.url(e.target.href)
 
             mediumInstance.subscribe 'editableDrop', (event) ->
@@ -514,7 +534,7 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 wysiwygCodeHightlighterService.addHightlighter(mediumInstance.elements[0])
                 refreshCodeBlocks(mediumInstance)
 
-        $(editorMedium[0]).on 'mousedown', (e) -> 
+        $(editorMedium[0]).on 'mousedown', (e) ->
             if e.target.href
                 e.preventDefault()
                 e.stopPropagation()
@@ -522,7 +542,7 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
                 $scope.$applyAsync () ->
                     if !$scope.editMode
                         setEditMode(true)
-                        refreshCodeBlocks(mediumInstance)                   
+                        refreshCodeBlocks(mediumInstance)
 
         $(editorMedium[0]).on 'dblclick', 'pre', (e) ->
             $scope.$applyAsync () ->
@@ -532,6 +552,16 @@ Medium = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoad
 
                 $scope.currentCodeLanguage = wysiwygCodeHightlighterService.getLanguageInClassList(codeBlockSelected.classList)
                 $scope.code = codeBlockSelected.innerText
+
+        $(editorMarkdown).on "dragover", (e) ->
+            e.preventDefault()
+
+        $(editorMarkdown).on "dragenter", (e) ->
+            e.preventDefault()
+
+        $(editorMarkdown).on "drop", (e) ->
+            e.preventDefault()
+            $scope.onUploadFile({files: e.originalEvent.dataTransfer.files, cb: uploadEndMarkdown})
 
         unwatch = $scope.$watch 'content', (content) ->
             if !_.isUndefined(content)
