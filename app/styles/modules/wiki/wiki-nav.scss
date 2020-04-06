@@ -11,7 +11,7 @@
     }
     .add-button {
         background: $text-hover;
-        box-shadow: 0px 4px 12px transparentize($text-hover, 0.4);
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
         padding: 0 18px 0 6px;
         color: $white;
         border-radius: 3px;
@@ -22,7 +22,7 @@
         &:hover {
             color: $white;
             background-color: lighten($text-hover, 5%);
-            box-shadow: 0px 4px 12px transparentize($text-hover, 0.2);
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
         }
         @include until($widescreen) {
             margin: 0.5rem 0.75rem;

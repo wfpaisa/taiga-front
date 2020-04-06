@@ -660,10 +660,6 @@
             padding-left: $spacing;
             $min-width: $sidebar-width;
             width: $sidebar-width;
-
-            a {
-                color: rgba($white, 0.6) !important;
-            }
         }
     }
     .existing-item-wrapper {
@@ -762,8 +758,13 @@
         }
     }
 
-    .ticket-user-list .remove-user {
-        margin-right: 0;
+    .ticket-user-list {
+        .user-list-single:not(.read-only) .user-list-name a {
+            color: rgba($white, 0.6);
+        }
+        .remove-user {
+            margin-right: 0;
+        }
     }
 
     .tg-add-assigned {
