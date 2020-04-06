@@ -8,7 +8,7 @@
         border: 1px solid $gray-light;
         height: 55px;
         .wysiwyg {
-            padding: .5rem;
+            padding: 0.5rem;
         }
         .medium-editor-placeholder,
         .markdown-editor-placeholder {
@@ -33,7 +33,7 @@
     }
     .save-comment {
         margin-top: 1rem;
-        padding: .5rem 4rem;
+        padding: 0.5rem 4rem;
     }
 }
 .comment {
@@ -56,6 +56,7 @@
         flex-shrink: 0;
         margin-right: 1.5rem;
         width: 60px;
+        border-radius: 50%;
     }
     .comment-data {
         align-items: center;
@@ -65,7 +66,7 @@
     }
     .comment-creator {
         color: $primary;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
     .comment-date {
         @include font-size(small);
@@ -74,18 +75,18 @@
     .comment-edited {
         @include font-size(small);
         background: $whitish;
-        margin: 0 .5rem;
-        padding: .25rem;
+        margin: 0 0.5rem;
+        padding: 0.25rem;
         .separator {
-            margin: 0 .25rem;
+            margin: 0 0.25rem;
         }
         a {
             color: $primary;
             fill: $primary;
         }
         svg {
-            @include svg-size(.75rem);
-            margin: 0 0 0 .25rem;
+            @include svg-size(0.75rem);
+            margin: 0 0 0 0.25rem;
         }
     }
     .comment-options {
@@ -101,14 +102,14 @@
         }
         .icon-edit {
             fill: $gray-light;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             &:hover {
                 fill: $gray;
             }
         }
         .icon-close {
             fill: $gray-light;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             &:hover {
                 fill: $red;
             }
@@ -138,20 +139,20 @@
         transition: none;
         .icon-arrow-down,
         .icon-arrow-up {
-            @include svg-size(.8rem);
-            margin-left: .25rem;
+            @include svg-size(0.8rem);
+            margin-left: 0.25rem;
         }
     }
     .restore-comment {
         margin-left: auto;
-        transition: all .2s;
+        transition: all 0.2s;
         &:hover {
             color: $primary;
             fill: $primary;
         }
         .icon-reload {
-            @include svg-size(.8rem);
-            margin-right: .25rem;
+            @include svg-size(0.8rem);
+            margin-right: 0.25rem;
         }
     }
     .deleted-comment-comment {
