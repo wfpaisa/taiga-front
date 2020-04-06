@@ -3,25 +3,25 @@ tg-related-userstory-row {
     align-items: center;
     border-bottom: 1px solid $whitish;
     display: flex;
-    padding: .5rem 0 .5rem .5rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
     &.sortable {
         cursor: move;
         &:hover {
-            background: $primary-lighter;
+            background: $text-hover;
             .userstory-settings {
                 opacity: 1;
-                transition: all .2s ease-in;
+                transition: all 0.2s ease-in;
             }
             .icon-drag {
                 opacity: 1;
             }
         }
         .icon-drag {
-            @include svg-size(.75rem);
+            @include svg-size(0.75rem);
             cursor: move;
             fill: $whitish;
             opacity: 0;
-            transition: opacity .1s;
+            transition: opacity 0.1s;
         }
     }
     .status {
@@ -54,7 +54,7 @@ tg-related-userstory-row {
         }
         span {
             display: inline-block;
-            margin-left: .25rem;
+            margin-left: 0.25rem;
         }
     }
     .closed {
@@ -67,11 +67,10 @@ tg-related-userstory-row {
         .userstory-name a {
             color: $whitish;
             text-decoration: line-through;
-
         }
     }
     .blocked {
-        background: rgba($red-light, .2);
+        background: rgba($red-light, 0.2);
         border-left: 10px solid $red-light;
     }
     .userstory-settings {
@@ -83,8 +82,8 @@ tg-related-userstory-row {
         svg {
             @include svg-size(1.1rem);
             fill: $gray-light;
-            margin-right: .5rem;
-            transition: fill .2s ease-in;
+            margin-right: 0.5rem;
+            transition: fill 0.2s ease-in;
             &:hover {
                 fill: $gray;
             }
@@ -112,7 +111,7 @@ tg-related-userstory-row {
             width: 35px;
         }
         figcaption {
-            margin-left: .5rem;
+            margin-left: 0.5rem;
         }
     }
 }

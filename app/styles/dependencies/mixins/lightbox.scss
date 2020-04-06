@@ -1,5 +1,5 @@
 @mixin lightbox {
-    background: rgba($white, .95);
+    background: rgba($grey-02, 0.95);
     bottom: 0;
     display: none;
     left: 0;
@@ -16,8 +16,8 @@
         position: absolute;
         right: 3rem;
         top: 3rem;
-        transition: fill .2s;
-        display: block;
+        transition: fill 0.2s;
+
         &:hover {
             fill: $red-light;
         }
@@ -32,11 +32,11 @@
         display: flex;
         justify-content: center;
         opacity: 1;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
     }
     &.close {
         opacity: 0;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
     }
     .lb-icon {
         margin: 1rem auto;

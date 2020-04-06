@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
         margin: 2rem 0 1rem;
-        padding: .9rem 1rem;
+        padding: 0.9rem 1rem;
         h1 {
             @include font-type(text);
             @include font-size(larger);
@@ -20,26 +20,25 @@
         @include svg-size();
     }
     .icon-badge {
-        fill: $primary-light;
-        margin-left: .5rem;
-        stroke: $primary-light;
+        fill: $text-hover;
+        margin-left: 0.5rem;
+        stroke: $text-hover;
     }
     .create-project-btn {
         @include font-size(small);
-        margin-right: .25rem;
-        padding: .6rem 2.5rem;
+        margin-right: 0.25rem;
+        padding: 0.6rem 2.5rem;
     }
     .import-project-button {
-        padding: .53rem .8rem;
+        padding: 0.53rem 0.8rem;
         &:hover {
             .icon-upload {
-                fill: $primary-light;
+                fill: $text-hover;
             }
         }
         .icon-upload {
             fill: $white;
         }
-
     }
     .project-list-section {
         display: flex;
@@ -54,11 +53,11 @@
         width: 200px;
     }
     .list-itemtype-project {
-        background: rgba($white, .6);
+        background: rgba($white, 0.6);
         &:hover {
-            background: rgba($primary-light, .1);
+            background: rgba($text-hover, 0.1);
             cursor: move;
-            transition: background .3s;
+            transition: background 0.3s;
             .drag {
                 opacity: 1;
             }
@@ -69,7 +68,7 @@
             .private,
             .project-description,
             .icon-badge {
-                opacity: .25;
+                opacity: 0.25;
             }
         }
         &.blocked-project:hover {
@@ -91,8 +90,8 @@
         svg {
             fill: $gray-light;
             height: 1.1rem;
-            margin-right: .5rem;
-            transition: opacity .2s;
+            margin-right: 0.5rem;
+            transition: opacity 0.2s;
             width: 1.1rem;
         }
     }

@@ -1,11 +1,9 @@
 // Typography
 // Font face
 
-@each $font-face in
-OpenSans-CondLight,
-OpenSans-Light,
-OpenSans-Regular,
-OpenSans-Semibold {
+@each $font-face in OpenSans-CondLight, OpenSans-Light, OpenSans-Regular,
+    OpenSans-Semibold
+{
     @font-face {
         font-family: '#{$font-face}';
         src: url('../fonts/#{$font-face}.ttf') format('truetype');
@@ -13,11 +11,13 @@ OpenSans-Semibold {
 }
 
 @font-face {
-    font-family: taiga; font-style: normal; font-weight: normal;
+    font-family: taiga;
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/taiga.eot');
     src: url('../fonts/taiga.eot?') format('eot'),
         url('../fonts/taiga.woff') format('woff'),
-        url('../fonts/taiga.ttf')  format('truetype');
+        url('../fonts/taiga.ttf') format('truetype');
 }
 
 h1,
@@ -51,7 +51,7 @@ h1 {
     span {
         @include font-type(text);
         @include font-size(larger);
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         overflow: hidden;
         text-overflow: ellipsis;
         vertical-align: bottom;
@@ -141,7 +141,7 @@ a:visited {
     text-decoration: none;
 
     &:hover {
-        color: $primary;
-        transition: color .3s linear;
+        color: $text-hover;
+        transition: color 0.3s linear;
     }
 }

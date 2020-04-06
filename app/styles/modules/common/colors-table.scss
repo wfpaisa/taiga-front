@@ -32,16 +32,16 @@
             display: none;
         }
         &:hover {
-            background: lighten(rgba($primary-light, .2), 30%);
+            background: lighten(rgba($text-hover, 0.2), 30%);
             cursor: move;
-            transition: background .2s ease-in;
+            transition: background 0.2s ease-in;
             .icon {
                 opacity: 1;
-                transition: opacity .2s ease-in;
+                transition: opacity 0.2s ease-in;
             }
             .options-column {
                 opacity: 1;
-                transition: opacity .3s linear;
+                transition: opacity 0.3s linear;
             }
         }
         &.no-draggable {
@@ -122,41 +122,40 @@
                 display: block;
             }
         }
-
     }
 
     .before-after-selector {
         display: flex;
-        font-size: .9rem;
+        font-size: 0.9rem;
         input {
             display: none;
-            +label {
-                background: rgba($whitish, .7);
+            + label {
+                background: rgba($whitish, 0.7);
                 cursor: pointer;
                 display: block;
-                padding: .5rem .25rem;
+                padding: 0.5rem 0.25rem;
                 text-align: center;
                 text-transform: uppercase;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            +label:hover {
-                background: rgba($primary-light, .3);
-                transition: background .2s ease-in;
+            + label:hover {
+                background: rgba($text-hover, 0.3);
+                transition: background 0.2s ease-in;
             }
         }
         .before-after-selector-single {
             flex: 1;
-            margin-right: .25rem;
+            margin-right: 0.25rem;
             &:last-child {
                 margin-right: 0;
             }
             &.checked label {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
             &.checked label:hover {
-                background: $primary-light;
+                background: $text-hover;
             }
         }
     }
@@ -179,6 +178,7 @@
         border-radius: 2px;
         height: 40px;
         width: 40px;
+        border-radius: 50%;
     }
 
     .icon {
@@ -187,8 +187,8 @@
         margin-right: 1rem;
         opacity: 0;
         &:hover {
-            fill: $primary-light;
-            transition: all .2s ease-in;
+            fill: $text-hover;
+            transition: all 0.2s ease-in;
         }
         &.icon-check {
             cursor: default;
@@ -220,5 +220,4 @@
             visibility: hidden;
         }
     }
-
 }

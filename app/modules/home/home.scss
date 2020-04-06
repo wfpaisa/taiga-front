@@ -13,7 +13,7 @@
         display: flex;
         flex-direction: row;
         margin-right: 1.5rem;
-        @include until ($desktop) {
+        @include until($desktop) {
             margin-right: 0;
         }
         @include mobile {
@@ -33,7 +33,7 @@
     .toggle-hidden {
         border-top: 1px solid $gray-lighter;
         margin: 2rem 0;
-        padding-top: .5rem;
+        padding-top: 0.5rem;
         text-align: center;
     }
     .project-list {
@@ -48,9 +48,8 @@
         @include font-type(light);
         @include font-size(large);
         align-content: center;
-        background: $mass-white;
         display: flex;
-        margin: 0 0 .5rem;
-        padding: .5rem 1rem;
+        margin: 0 0 0.5rem;
+        padding: 0.5rem 1rem;
     }
 }

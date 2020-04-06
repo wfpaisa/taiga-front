@@ -1,33 +1,55 @@
 .check {
-    background-color: $whitish;
-    border-radius: 2px;
+    // background-color: $whitish;
+    // border-radius: 18px;
     cursor: pointer;
-    height: 1.5rem;
-    overflow: hidden;
+    height: 32px;
     position: relative;
-    width: 65px;
+    width: 64px;
+
     input {
-        cursor: pointer;
-        height: 50px;
-        left: -10px;
-        opacity: 0;
+        height: 32px;
+        width: 64px;
+        // visibility: hidden;
+        // display: none;
         position: absolute;
-        top: -10px;
-        width: 100px;
-        z-index: 999;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+
         + div {
-            background-color: $grey-70;
-            color: $white;
-            height: 25px;
-            transition: all .2s linear;
-            width: 50%;
+            width: 64px;
+            height: 32px;
+            background: $grey-10;
+            display: block;
+            border-radius: 100px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 28px;
+                height: 28px;
+                background-image: linear-gradient(
+                    rgb(250, 250, 250),
+                    rgb(240, 240, 240)
+                );
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0),
+                    0 1px 2px rgba(0, 0, 0, 0.6),
+                    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                transition: 0.3s;
+            }
         }
         ~ .check-text {
-            @include font-size(small);
+            @include font-size(xsmall);
             @include font-type(text);
-            color: $white;
+            color: $grey-30;
             position: absolute;
-            top: .2rem;
+            top: 0;
+            line-height: 32px;
+            display: none;
         }
         ~ .check-yes {
             opacity: 0;
@@ -41,31 +63,99 @@
             text-align: center;
             width: 33px;
         }
+
+        &:checked {
+            + div {
+                background: $secondary;
+                box-shadow: 0 0 4px transparentize($secondary, 0.6);
+                &:after {
+                    left: calc(100% - 2px);
+                    transform: translateX(-100%);
+                }
+            }
+            ~ .check-text {
+                color: $secondary;
+            }
+            ~ .check-yes {
+                opacity: 1;
+            }
+            ~ .check-no {
+                opacity: 0;
+            }
+        }
+
+        &:active + div:after {
+            width: 35px;
+        }
     }
-    input:disabled,
-    input:checked:disabled {
-        cursor: auto;
-        + div {
-            background-color: $gray-lighter;
-        }
-        ~ .check-text {
-            color: $whitish;
-        }
-    }
-    input:checked {
-        + div {
-            background-color: $primary;
-            color: $white;
-            margin-left: 50%;
-            transition: all .2s linear;
-        }
-        ~ .check-yes {
-            opacity: 1;
-        }
-        ~ .check-no {
-            opacity: 0;
-        }
-    }
+    // input {
+    //     cursor: pointer;
+    //     height: 50px;
+    //     left: -10px;
+    //     opacity: 0;
+    //     position: absolute;
+    //     top: -10px;
+    //     width: 100px;
+    //     z-index: 999;
+    //     + div {
+    //         // background-color: $grey-30;
+    //         color: $white;
+    //         height: 32px;
+    //         transition: all .2s linear;
+    //         width: 32px;
+    //         border-radius: 18px;
+    //         // box-shadow: inset 0 2px 2px rgba(0,0,0,0.2),0px 2px 2px rgba(0,0,0,0.2);
+    //         background-image: linear-gradient(rgb(250,250,250), rgb(240,240,240));
+    //         box-shadow: 0 0 0 2px rgba(255,255,255,0), 0 1px 2px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.2)
+    //     }
+    //     ~ .check-text {
+    //         @include font-size(xsmall);
+    //         @include font-type(text);
+    //         color: $grey-40;
+    //         position: absolute;
+    //         top: .2rem;
+    //         line-height: 28px;
+    //     }
+    //     ~ .check-yes {
+    //         opacity: 0;
+    //         right: 0;
+    //         text-align: center;
+    //         width: 32px;
+    //     }
+    //     ~ .check-no {
+    //         left: 0;
+    //         opacity: 1;
+    //         text-align: center;
+    //         width: 33px;
+    //     }
+    // }
+    // input:disabled,
+    // input:checked:disabled {
+    //     cursor: auto;
+    //     + div {
+    //         background-color: $gray-lighter;
+    //     }
+    //     ~ .check-text {
+    //         color: $whitish;
+    //     }
+    // }
+    // input:checked {
+
+    //     + div {
+    //         background-image: linear-gradient($secondary, $secondary);
+    //         margin-left: 50%;
+    //         transition: all .2s linear;
+    //     }
+    //     ~ .check-text {
+    //         color:$white;
+    //     }
+    //     ~ .check-yes {
+    //         opacity: 1;
+    //     }
+    //     ~ .check-no {
+    //         opacity: 0;
+    //     }
+    // }
 }
 
 .check-toggle {

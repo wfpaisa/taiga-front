@@ -4,19 +4,21 @@
         flex-direction: column;
     }
     .ticket-role-points {
-        background: $grey-05;
-        color: $gray;
+        background: rgba($gray-lighter, 0.05);
+        color: rgba($white, 0.6);
         display: flex;
         flex: 1;
         justify-content: space-between;
-        margin-bottom: .1rem;
+        margin-bottom: 2px;
         min-height: 2rem;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         position: relative;
+        border-radius: 6px;
+
         &.clickable {
             &:hover,
             &.active {
-                background: rgba($gray-lighter, .1);
+                background: rgba($gray-lighter, 0.2);
                 .points,
                 .role,
                 .icon-arrow-bottom {
@@ -26,9 +28,9 @@
             }
         }
         &:last-child {
-            background: rgba($gray-lighter, .4);
+            background: rgba($gray-lighter, 0.1);
             border-bottom: 0;
-            color: $gray;
+            color: $white;
             .points,
             .role,
             .icon-arrow-bottom {
@@ -39,20 +41,28 @@
         }
         .icon-arrow-down {
             fill: currentColor;
-            height: .6rem;
-            margin-left: .25rem;
-            width: .6rem;
+            height: 0.6rem;
+            margin-left: 0.25rem;
+            width: 0.6rem;
         }
         .points {
             @include font-type(light);
-            color: $gray;
+            color: rgba($white, 0.6);
         }
         .role {
             @include font-type(light);
         }
     }
     .popover {
-        @include popover(200px, $top: 100%, $left: .5rem, $arrow-width: 10px, $arrow-top: -5px, $arrow-left: 10px, $arrow-height: 10px);
+        @include popover(
+            200px,
+            $top: 100%,
+            $left: 0.5rem,
+            $arrow-width: 10px,
+            $arrow-top: -5px,
+            $arrow-left: 10px,
+            $arrow-height: 10px
+        );
         li {
             display: inline-block;
             width: 23%;
@@ -62,12 +72,20 @@
             text-align: center;
             &:hover,
             &.active {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
             }
         }
         &.fix {
-            @include popover(200px, $top: 100%, $left: -160px, $arrow-width: 10px, $arrow-top: -5px, $arrow-left: 90%, $arrow-height: 10px);
+            @include popover(
+                200px,
+                $top: 100%,
+                $left: -160px,
+                $arrow-width: 10px,
+                $arrow-top: -5px,
+                $arrow-left: 90%,
+                $arrow-height: 10px
+            );
         }
     }
 }

@@ -18,13 +18,13 @@
     }
     .table-body {
         .row:hover {
-            background: rgba($primary-light, .05);
+            background: rgba($text-hover, 0.05);
             cursor: move;
-            transition: background .2s linear;
+            transition: background 0.2s linear;
             .icon-drag,
             .custom-options {
                 opacity: 1;
-                transition: opacity .2s linear;
+                transition: opacity 0.2s linear;
             }
         }
         form {
@@ -39,7 +39,7 @@
         color: $gray;
     }
     .js-view-custom-field {
-        padding: .75rem 0;
+        padding: 0.75rem 0;
         .custom-extra-attr-wrapper {
             margin-left: 1em;
         }
@@ -47,18 +47,18 @@
     .icon-drag {
         fill: $gray-light;
         opacity: 0;
-        padding: 0 .25rem 0 .1rem;
-        transition: color .2s linear;
+        padding: 0 0.25rem 0 0.1rem;
+        transition: color 0.2s linear;
     }
     .custom-name,
     .custom-description {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
     .custom-name {
         flex-basis: 25%;
         flex-shrink: 0;
         a {
-            padding: .5em;
+            padding: 0.5em;
         }
         svg {
             height: 12px;
@@ -84,12 +84,12 @@
         svg {
             cursor: pointer;
             fill: $gray-light;
-            margin-right: .5rem;
-            transition: color .2s linear;
+            margin-right: 0.5rem;
+            transition: color 0.2s linear;
             vertical-align: middle;
             &:hover {
                 fill: $primary;
-                transition: color .2s linear;
+                transition: color 0.2s linear;
             }
             &.icon-trash,
             &.icon-close {
@@ -99,7 +99,7 @@
     }
     .custom-options-wrapper {
         opacity: 0;
-        transition: opacity .3s linear;
+        transition: opacity 0.3s linear;
         &:hover {
             opacity: 1;
         }
@@ -111,26 +111,26 @@
         align-items: center;
         border-bottom: 1px solid $whitish;
         color: $gray-light;
-        font-size: .95em;
-        padding: .25em 1.5em;
+        font-size: 0.95em;
+        padding: 0.25em 1.5em;
     }
     .js-view-custom-field-extra {
-        padding: .5em;
+        padding: 0.5em;
     }
     .js-edit-custom-field {
-        margin-left: .4rem;
+        margin-left: 0.4rem;
     }
     .custom-extra-attr-wrapper {
         flex-grow: 1;
     }
     .custom-extra-actions {
-        padding: .5em;
+        padding: 0.5em;
         a {
             color: $primary;
         }
         svg {
             height: 10px;
-            margin-right: .25em;
+            margin-right: 0.25em;
             width: 10px;
         }
     }
@@ -140,5 +140,4 @@
             opacity: 1;
         }
     }
-
 }

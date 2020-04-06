@@ -4,13 +4,16 @@ $radio-mark-background: #d6d5d5;
 
 tg-filter {
     @include sidebar-medium-width-hidden-absolute();
-    background: $grey-02;
+    background: $primary;
     display: block;
     max-height: 100%;
     min-height: 100%;
     overflow-y: auto;
     padding: 1rem 0;
     z-index: 1;
+    border-radius: 12px;
+    color: rgba($white, 0.6);
+
     .filters-applied {
         padding: 0 1rem 1rem;
         .single-filter {
@@ -36,21 +39,36 @@ tg-filter {
             color: $red-light;
         }
 
-        a .icon {
-            margin-left: 5px;
-            vertical-align: bottom;
-            width: .5rem;
+        a {
+            background: $text-hover;
+            box-shadow: 0px 4px 12px transparentize($text-hover, 0.4);
+            padding: 1px 6px;
+            color: $white;
+            border-radius: 6px;
+
+            &:hover {
+                color: $white;
+                background-color: lighten($text-hover, 5%);
+                box-shadow: 0px 4px 12px transparentize($text-hover, 0.2);
+            }
+
+            .icon {
+                fill: $white;
+                margin-left: 5px;
+                vertical-align: bottom;
+                width: 0.5rem;
+            }
         }
 
         .filters-advanced-form {
-            padding: .75rem 0;
+            padding: 0.75rem 0;
             text-align: center;
         }
 
         .custom-radio {
             display: inline;
 
-            input[type=radio] {
+            input[type='radio'] {
                 display: none;
             }
         }
@@ -59,16 +77,16 @@ tg-filter {
             cursor: pointer;
 
             &.include {
-                margin-right: .75rem;
+                margin-right: 0.75rem;
             }
             &.active .radio-mark-inner {
                 opacity: 1;
             }
             &.active.include {
-                color: $primary;
+                color: $text-hover;
             }
             &.active.exclude {
-                color: $red-light;
+                color: $red;
             }
         }
 
@@ -93,15 +111,17 @@ tg-filter {
             width: 14px;
 
             &.include {
-                background: $primary;
+                background: $text-hover;
             }
 
             &.exclude {
-                background: $red-light;
+                background: $red;
             }
         }
     }
-
+    h1 {
+        color: $white;
+    }
     h1,
     form {
         padding: 0 1rem;
@@ -116,11 +136,11 @@ tg-filter {
     }
     .search-action {
         position: absolute;
-        right: .7rem;
-        top: .7rem;
+        right: 0.7rem;
+        top: 0.7rem;
     }
     &.open {
-        box-shadow: 1px 1px 5px rgba($gray, .2);
+        box-shadow: 1px 1px 5px rgba($gray, 0.2);
     }
 }
 
@@ -139,8 +159,8 @@ tg-filter {
         margin-bottom: 0;
     }
     li {
-        border-bottom: 1px solid $gray-light;
-        text-transform: uppercase;
+        // border-bottom: 1px solid $gray-light;
+        // text-transform: uppercase;
         &.selected {
             border-bottom: 0;
         }
@@ -155,29 +175,33 @@ tg-filter {
     }
     .filters-cat-single {
         align-items: center;
-        color: $grayer;
+        color: rgba($white, 0.6);
         display: flex;
         justify-content: space-between;
-        padding: .5rem .5rem .5rem 1.5rem;
-        transition: color .2s ease-in;
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+        transition: color 0.2s ease-in;
         &:hover,
         &.selected {
-            background-color: $grey-10;
-            color: $grayer;
-            transition: background-color .2s ease-in;
+            background-color: rgba($white, 0.1);
+            color: $text-hover;
+            transition: background-color 0.2s ease-in;
             .icon {
                 opacity: 1;
-                transition: opacity .2s ease-in;
+                fill: $text-hover;
+                transition: opacity 0.2s ease-in;
             }
+        }
+        .icon {
+            fill: rgba($white, 0.6);
         }
     }
     .icon-arrow-down {
-        fill: currentColor;
+        fill: rgba($white, 0.6);
         float: right;
-        height: .9rem;
+        height: 0.9rem;
         opacity: 0;
-        transition: opacity .2s ease-in;
-        width: .9rem;
+        transition: opacity 0.2s ease-in;
+        width: 0.9rem;
     }
 }
 
@@ -185,37 +209,46 @@ tg-filter {
     @include font-type(text);
     @include clearfix;
     align-items: center;
-    background: $grey-10;
+    background: rgba($white, 0.05);
+    color: rgba($white, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba($white, 0.1);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-bottom: .5rem;
-    opacity: .5;
-    padding-right: .5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    padding-right: 0.5rem;
     position: relative;
+    &:hover {
+        background: rgba($white, 0.1);
+        color: $white;
+    }
     &.selected,
     &.active {
-        color: $grayer;
+        color: $white;
         opacity: 1;
-        transition: opacity .2s linear;
+        transition: opacity 0.2s linear;
     }
     .name,
     .number {
         padding: 8px 10px;
+        border-radius: 0 6px 6px 0;
     }
     .name {
         @include ellipsis(100%);
         border-color: transparent;
         border-style: solid;
-        border-width: 0 0 0 3px;
+        border-width: 0 0 0 6px;
         display: block;
         width: 100%;
+        border-radius: 6px 0 0 6px;
         img {
             vertical-align: middle;
         }
     }
     .number {
-        background: $grey-20;
+        background: rgba($white, 0.2);
         position: absolute;
         right: 0;
         top: 0;
@@ -225,7 +258,7 @@ tg-filter {
         display: block;
         svg {
             fill: $gray;
-            transition: fill .2s linear;
+            transition: fill 0.2s linear;
         }
         &:hover {
             svg {

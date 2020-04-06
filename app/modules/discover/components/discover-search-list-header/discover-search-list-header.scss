@@ -7,7 +7,7 @@
     svg {
         @include svg-size(1.2rem);
         fill: $gray-light;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
     }
     .title {
         @include font-type(semibold);
@@ -30,7 +30,7 @@
         }
     }
     svg {
-        @include svg-size(.8rem);
+        @include svg-size(0.8rem);
     }
 }
 
@@ -54,14 +54,14 @@
         }
     }
     &.ng-enter {
-        animation: dropdownFade .2s;
+        animation: dropdownFade 0.2s;
     }
     .results {
         @include font-size(small);
         color: $red-light;
         display: block;
-        padding: .5rem 1rem;
-        transition: all .2s;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s;
         &:hover {
             color: $red;
         }
@@ -72,14 +72,14 @@
         margin-left: auto;
         a {
             display: block;
-            padding: .5rem 1rem;
-            transition: all .2s;
+            padding: 0.5rem 1rem;
+            transition: all 0.2s;
             &:hover {
                 background: $gray-light;
                 color: currentColor;
             }
             &.active {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
             }
         }

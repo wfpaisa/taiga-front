@@ -27,33 +27,33 @@
         margin-bottom: 2rem;
         input {
             display: none;
-            &:checked+label {
-                background: $primary-light;
+            &:checked + label {
+                background: $text-hover;
                 color: $white;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            &:checked+label:hover {
-                background: $primary-light;
+            &:checked + label:hover {
+                background: $text-hover;
             }
-            +label {
-                background: rgba($whitish, .7);
+            + label {
+                background: rgba($whitish, 0.7);
                 cursor: pointer;
                 display: block;
                 font-size: 1em;
                 padding: 2rem 1rem;
                 text-align: center;
                 text-transform: uppercase;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            +label:hover {
-                background: rgba($primary-light, .3);
-                transition: background .2s ease-in;
+            + label:hover {
+                background: rgba($text-hover, 0.3);
+                transition: background 0.2s ease-in;
             }
         }
         .existing-or-new-selector-single {
             flex: 1;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
@@ -62,11 +62,11 @@
         display: flex;
         justify-content: center;
         fieldset {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             &:hover {
                 color: $white;
-                transition: all .2s ease-in;
-                transition-delay: .2s;
+                transition: all 0.2s ease-in;
+                transition-delay: 0.2s;
             }
             &:last-child {
                 margin: 0;
@@ -76,11 +76,11 @@
         .iocaine {
             vertical-align: middle;
             &:hover {
-                background: $primary-light;
+                background: $text-hover;
                 border: 1px solid $primary;
             }
             svg {
-                @include svg-size(.75rem);
+                @include svg-size(0.75rem);
             }
         }
 
@@ -93,11 +93,10 @@
         .client-requirement,
         .team-requirement,
         .iocaine-flag {
-            input:checked+label {
+            input:checked + label {
                 background: $primary;
                 border: 1px solid $primary;
                 color: $white;
-
             }
         }
 
@@ -106,7 +105,7 @@
                 align-self: stretch;
                 display: block;
             }
-            input:checked+label {
+            input:checked + label {
                 background: $red;
                 border: 1px solid $red;
                 color: $white;
@@ -124,7 +123,7 @@
         overflow-y: auto;
     }
     .attachment-delete {
-        right: .5rem;
+        right: 0.5rem;
         svg {
             fill: $gray-light;
             height: 1.25rem;
@@ -172,11 +171,11 @@
         opacity: 1;
         position: absolute;
         right: 1rem;
-        top: .7rem;
-        transition: opacity .3s linear;
+        top: 0.7rem;
+        transition: opacity 0.3s linear;
         &.disappear {
             opacity: 0;
-            transition: opacity .3s linear;
+            transition: opacity 0.3s linear;
         }
     }
     .dates {
@@ -196,14 +195,14 @@
         @include font-size(small);
         color: $gray;
         float: right;
-        margin: 1rem .25rem 0 0;
-        transition: color .3s linear;
+        margin: 1rem 0.25rem 0 0;
+        transition: color 0.3s linear;
         .icon {
             fill: currentColor;
         }
         &:hover {
             color: $red;
-            transition: color .3s linear;
+            transition: color 0.3s linear;
             .icon {
                 fill: currentColor;
             }
@@ -236,7 +235,7 @@
             text-align: center;
             width: 100%;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
@@ -274,7 +273,7 @@
             padding: 8px 0;
             text-align: center;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
@@ -302,8 +301,8 @@
         margin: 1rem 0;
         text-align: center;
         input {
-            margin-right: .5rem;
-            +label {
+            margin-right: 0.5rem;
+            + label {
                 @include font-size(small);
                 @include font-type(text);
             }
@@ -316,7 +315,7 @@
             padding: 8px 0;
             text-align: center;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
@@ -345,12 +344,11 @@
             padding: 8px 0;
             text-align: center;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
 }
-
 
 .lightbox-generic-success,
 .lightbox-generic-error,
@@ -396,10 +394,10 @@
         padding: 3px;
         position: relative;
         .bar {
-            background: $primary-light;
+            background: $text-hover;
             height: 24px;
             position: absolute;
-            transition: width .1s linear;
+            transition: width 0.1s linear;
         }
         .progress {
             @include font-type(text);
@@ -408,9 +406,9 @@
             background: darken($whitish, 5%);
             bottom: 35px;
             color: $gray;
-            padding: .3rem;
+            padding: 0.3rem;
             position: absolute;
-            transition: left .1s linear;
+            transition: left 0.1s linear;
         }
     }
 }
@@ -427,7 +425,7 @@
         fieldset {
             flex-basis: 100px;
             flex-grow: 1;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             width: 30%;
             &:last-child {
                 margin: 0;
@@ -467,18 +465,18 @@
     .user-list-single {
         &:hover,
         &.selected {
-            background: rgba(lighten($primary-light, 30%), .3);
+            background: rgba(lighten($text-hover, 30%), 0.3);
             cursor: pointer;
         }
         &:hover {
-            transition: background .3s linear;
-            transition-delay: .2s;
+            transition: background 0.3s linear;
+            transition-delay: 0.2s;
         }
     }
     .more-watchers {
         @include font-type(text);
         @include font-size(medium);
-        padding: .5rem;
+        padding: 0.5rem;
         text-align: center;
     }
     .add-comment {
@@ -491,7 +489,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            transition: fill .2s;
+            transition: fill 0.2s;
             &:hover {
                 fill: $red-light;
             }
@@ -518,7 +516,7 @@
         margin: 0;
     }
     .ticket-role-points {
-        margin: .1rem;
+        margin: 0.1rem;
         min-width: 20%;
         &:first-child {
             margin-left: 0;
@@ -528,7 +526,7 @@
         }
         &:last-child {
             flex-basis: 100%;
-            margin: .1rem 0;
+            margin: 0.1rem 0;
             min-width: 100%;
         }
     }
@@ -583,22 +581,23 @@
         margin: 2rem 0 1rem;
     }
     .reason textarea {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
     }
     .due-date-suggestions {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 1rem 0 .5rem;
+        margin: 1rem 0 0.5rem;
     }
     .suggestion {
-        background: rgba($gray-lighter, .2);
+        background: rgba($gray-lighter, 0.2);
         color: $gray-lighter;
         justify-content: flex-start;
-        margin: 0 .5rem .5rem;
+        margin: 0 0.5rem 0.5rem;
         min-height: 2rem;
-        padding: .5rem .75rem;
+        padding: 0.5rem 0.75rem;
         position: relative;
+        border-radius: 6px;
         &:first-child {
             margin-left: 0;
         }
@@ -608,7 +607,8 @@
         &.clickable {
             &:hover,
             &.active {
-                background: rgba($primary-light, .9);
+                background: $text-hover;
+                box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
                 color: $white;
             }
         }
@@ -617,14 +617,14 @@
         @include font-size(small);
         color: $gray;
         float: right;
-        margin: 1rem .25rem 0 0;
-        transition: color .3s linear;
+        margin: 1rem 0.25rem 0 0;
+        transition: color 0.3s linear;
         .icon {
             fill: currentColor;
         }
         &:hover {
             color: $red;
-            transition: color .3s linear;
+            transition: color 0.3s linear;
             .icon {
                 fill: currentColor;
             }
@@ -655,12 +655,15 @@
             max-width: $width - $sidebar-width;
         }
         .sidebar {
-            background: none;
             border-left: 2px solid $whitish;
             margin-left: $spacing;
             padding-left: $spacing;
             $min-width: $sidebar-width;
             width: $sidebar-width;
+
+            a {
+                color: rgba($white, 0.6) !important;
+            }
         }
     }
     .existing-item-wrapper {
@@ -683,15 +686,15 @@
         display: flex;
         flex-basis: 100%;
         height: $control-height;
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
         .status-text {
             flex-grow: 1;
             text-transform: uppercase;
         }
         svg {
             fill: $white;
-            height: .9rem;
-            width: .9rem;
+            height: 0.9rem;
+            width: 0.9rem;
         }
     }
 
@@ -700,6 +703,7 @@
         .user-list-avatar img {
             height: 3rem;
             width: 3rem;
+            border-radius: 50%;
         }
     }
 
@@ -707,11 +711,11 @@
         a {
             color: $white;
             display: block;
-            padding: .5rem 1rem;
+            padding: 0.5rem 1rem;
             text-align: left;
             &:hover,
             &.active {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
     }
@@ -737,11 +741,12 @@
         width: 100%;
         $item-size: 44.75px;
         .user-list-item {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             width: $item-size;
             img {
                 height: $item-size;
                 width: $item-size;
+                border-radius: 50%;
             }
             &:last-child {
                 margin-right: 0;
@@ -764,16 +769,16 @@
     .tg-add-assigned {
         align-items: center;
         display: flex;
-        margin: .25rem 0 .75rem;
+        margin: 0.25rem 0 0.75rem;
         .add-assigned {
             fill: $gray;
             opacity: 1;
-            right: .5rem;
+            right: 0.5rem;
             top: 2rem;
             &:hover {
                 cursor: pointer;
                 fill: $red;
-                transition: fill .2s;
+                transition: fill 0.2s;
             }
         }
 
@@ -781,7 +786,7 @@
             @include font-size(small);
             @include font-type(light);
             color: $gray;
-            margin: .2rem .5rem;
+            margin: 0.2rem 0.5rem;
         }
     }
 
@@ -798,7 +803,16 @@
     }
 
     .pop-users {
-        @include popover($pop-width, 60px, 0, '', '', 16px, -7px, ($pop-width / 3));
+        @include popover(
+            $pop-width,
+            60px,
+            0,
+            '',
+            '',
+            16px,
+            -7px,
+            ($pop-width / 3)
+        );
         &::after {
             z-index: -1;
         }
@@ -809,7 +823,7 @@
             }
         }
         ul {
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
         li {
             border-bottom: 1px solid $gray-light;
@@ -823,15 +837,16 @@
             display: flex;
             flex-direction: row;
             flex-grow: 0;
-            padding: .5rem 0;
+            padding: 0.5rem 0;
             &.selected {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
         .user-list-avatar {
             height: 32px;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             width: 32px;
+            border-radius: 50%;
         }
         .user-list-name {
             @include font-type(text);
@@ -841,13 +856,13 @@
 
         .remove svg {
             fill: $whitish;
-            height: .8rem;
-            width: .8rem;
+            height: 0.8rem;
+            width: 0.8rem;
         }
 
         .show-more {
             border-top: 1px solid $gray-light;
-            padding-top: .5rem;
+            padding-top: 0.5rem;
             text-align: center;
         }
     }
@@ -857,7 +872,7 @@
 
     .ticket-data-container {
         margin: 0;
-        padding: 0 0 .1rem;
+        padding: 0 0 0.1rem;
         .ticket-status .priority-data {
             margin: 0;
         }
@@ -874,8 +889,9 @@
             border: 0;
             height: 44px;
             min-height: 44px;
-            padding: .5rem .65rem;
+            padding: 0.5rem 0.65rem;
             width: auto;
+            box-shadow: none;
             svg {
                 max-height: initial;
             }
@@ -888,7 +904,7 @@
     }
 
     .blocked-note {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
     }
 }
 
@@ -907,11 +923,11 @@
         label {
             background: none;
             display: inline-block;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             margin-right: 0;
             padding: 0;
 
-            +input {
+            + input {
                 display: initial;
             }
         }
@@ -921,7 +937,6 @@
         width: 100%;
     }
 }
-
 
 .lightbox-relate-to-epic {
     .lightbox-create-related-epic-wrapper {
@@ -933,39 +948,39 @@
         margin-bottom: 1rem;
         input {
             display: none;
-            &:checked+label {
-                background: $primary-light;
+            &:checked + label {
+                background: $text-hover;
                 color: $white;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            &:checked+label:hover {
-                background: $primary-light;
+            &:checked + label:hover {
+                background: $text-hover;
             }
-            +label {
-                background: rgba($whitish, .7);
+            + label {
+                background: rgba($whitish, 0.7);
                 cursor: pointer;
                 display: block;
                 padding: 2rem 1rem;
                 text-align: center;
                 text-transform: uppercase;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            +label:hover {
-                background: rgba($primary-light, .3);
-                transition: background .2s ease-in;
+            + label:hover {
+                background: rgba($text-hover, 0.3);
+                transition: background 0.2s ease-in;
             }
         }
         .related-with-selector-single {
             flex: 1;
             &:first-child {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
             }
         }
     }
     fieldset {
         label {
             display: inline-block;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
     }
     .new-epic-title {
@@ -984,22 +999,22 @@
         margin-left: auto;
         input {
             display: none;
-            &:checked+label {
-                background: $primary-light;
+            &:checked + label {
+                background: $text-hover;
                 color: $white;
                 fill: $white;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            +label {
+            + label {
                 background: $mass-white;
                 color: $grayer;
                 cursor: pointer;
                 display: block;
-                padding: .5rem;
-                transition: background .2s ease-in;
+                padding: 0.5rem;
+                transition: background 0.2s ease-in;
             }
-            +label:hover {
-                background: $primary-light;
+            + label:hover {
+                background: $text-hover;
                 color: $white;
                 fill: $white;
             }

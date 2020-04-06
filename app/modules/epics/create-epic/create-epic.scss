@@ -22,11 +22,11 @@
         display: flex;
         justify-content: center;
         fieldset {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             &:hover {
                 color: $white;
-                transition: all .2s ease-in;
-                transition-delay: .2s;
+                transition: all 0.2s ease-in;
+                transition-delay: 0.2s;
             }
             &:last-child {
                 margin: 0;
@@ -34,13 +34,14 @@
         }
         input {
             display: none;
-            &:checked+label {
-                background: $primary;
-                border: 1px solid $primary;
+            &:checked + label {
+                background: $text-hover;
+                box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
                 color: $white;
             }
-            &:checked+.blocked {
+            &:checked + .blocked {
                 background: $red;
+                box-shadow: 0 4px 12px transparentize($red, 0.4);
                 border: 1px solid $red;
                 color: $white;
             }
@@ -49,22 +50,20 @@
     label {
         @include font-size(small);
         background: $mass-white;
-        border: 1px solid $gray-light;
         color: $gray-light;
         cursor: pointer;
         display: block;
-        padding: .5rem 3rem;
+        padding: 0.5rem 3rem;
         text-transform: none;
-        transition: all .2s ease-in;
+        transition: all 0.2s ease-in;
         &:hover {
-            background: $primary-light;
-            border: 1px solid $primary;
+            background: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
             color: $white;
         }
         &.blocked {
             &:hover {
                 background: $red-light;
-                border: 1px solid $red;
             }
         }
     }

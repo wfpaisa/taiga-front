@@ -25,7 +25,7 @@
     .invite-members-single-remove {
         color: $red-light;
         margin-left: 1rem;
-        transition: color .2s;
+        transition: color 0.2s;
         &:hover {
             color: $red;
         }
@@ -45,11 +45,11 @@
         .icon-add {
             @include svg-size(2rem);
             fill: $grayer;
-            transition: fill .2s;
+            transition: fill 0.2s;
         }
         &:hover {
             .icon-add {
-                fill: $primary-light;
+                fill: $text-hover;
             }
         }
     }

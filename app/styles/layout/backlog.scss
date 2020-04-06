@@ -28,11 +28,11 @@
             display: none;
         }
         .icon-move {
-            margin-right: .25rem;
+            margin-right: 0.25rem;
         }
     }
     .button-bulk {
-        margin-left: .2rem;
+        margin-left: 0.2rem;
     }
 }
 
@@ -41,7 +41,7 @@
     border-radius: 4px;
     box-shadow: 2px 2px 5px $gray;
     min-height: calc(40px + 1rem);
-    opacity: .9;
+    opacity: 0.9;
     padding: 1rem;
     .tags-block,
     .votes,
@@ -62,18 +62,18 @@
     @include font-size(small);
     background: $mass-white;
     cursor: pointer;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     text-align: center;
     &:hover {
         background: darken($mass-white, 3%);
-        transition: background .2s;
+        transition: background 0.2s;
     }
     .icon-add {
         @include svg-size(1.75rem);
-        background: $primary-light;
+        background: $text-hover;
         fill: $white;
         margin-right: 1rem;
-        padding: .25rem;
+        padding: 0.25rem;
         vertical-align: middle;
     }
 }

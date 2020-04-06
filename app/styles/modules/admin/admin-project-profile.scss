@@ -18,7 +18,7 @@
         svg {
             @include svg-size();
             fill: $gray-light;
-            margin-left: .5rem;
+            margin-left: 0.5rem;
         }
         .check {
             margin-left: auto;
@@ -28,11 +28,11 @@
         display: block;
         margin-top: 1rem;
         &.ng-hide-remove-active {
-            animation: dropdownFade .3s;
+            animation: dropdownFade 0.3s;
         }
         &.ng-hide-add-active {
-            animation: dropdownFade .2s reverse;
-            animation-delay: .1s;
+            animation: dropdownFade 0.2s reverse;
+            animation-delay: 0.1s;
         }
     }
     .delete-project {
@@ -51,7 +51,7 @@
         svg {
             @include svg-size(1.1rem);
             fill: $gray-light;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             vertical-align: middle;
         }
     }
@@ -61,36 +61,37 @@
 }
 .project-privacy-settings {
     display: flex;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     .privacy-option {
         flex: 1;
-        transition: .2 linear;
+        transition: 0.2 linear;
         &:first-child {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
         }
     }
-    input[type="radio"] {
+    input[type='radio'] {
         display: none;
     }
-    input[type="text"] {
+    input[type='text'] {
         display: none;
     }
     label {
         background: $mass-white;
         color: $grayer;
         text-align: center;
-        transition: all .2s linear;
+        transition: all 0.2s linear;
         &:hover {
-            background: rgba($primary-light, .4);
-            color: $grayer;
+            background: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+            color: $white;
             svg {
-                fill: $grayer;
+                fill: $white;
             }
         }
         svg {
             @include svg-size(1.1rem);
-            fill: $grayer;
-            margin-left: .5rem;
+            fill: $white;
+            margin-left: 0.5rem;
             vertical-align: middle;
         }
     }
@@ -102,14 +103,15 @@
     .privacy-project:checked {
         + label {
             @include font-type(text);
-            background: $primary-light;
+            background: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
             color: $white;
             svg {
                 @include svg-size(1.1rem);
                 fill: $white;
             }
         }
-        ~input[type="text"] {
+        ~ input[type='text'] {
             display: block;
         }
     }
@@ -120,7 +122,7 @@
             box-shadow: none;
             color: $gray-light;
             cursor: not-allowed;
-            opacity: .65;
+            opacity: 0.65;
             &:hover {
                 background: $mass-white;
                 color: $gray-light;
@@ -148,7 +150,7 @@ tg-admin-project-restrictions {
             display: inline-block;
             height: 12px;
             line-height: 12px;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             text-align: center;
             width: 12px;
         }
@@ -163,8 +165,8 @@ tg-admin-project-restrictions {
     a {
         color: $primary;
         &:hover {
-            color: $primary-light;
-            transition: color .2s;
+            color: $text-hover;
+            transition: color 0.2s;
         }
     }
     img {
@@ -172,7 +174,7 @@ tg-admin-project-restrictions {
     }
     .owner-info {
         flex: 1;
-        padding-left: .5rem;
+        padding-left: 0.5rem;
     }
     .owner-info-title {
         color: $gray-light;

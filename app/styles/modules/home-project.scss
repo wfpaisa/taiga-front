@@ -8,6 +8,7 @@
         width: 6rem;
         img {
             width: 100%;
+            border-radius: 50%;
         }
     }
     .single-project-title-wrapper {
@@ -17,7 +18,7 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
     .intro-title {
         align-items: center;
@@ -25,7 +26,7 @@
         .icon-private {
             fill: $gray-light;
             height: 24px;
-            margin-left: .25rem;
+            margin-left: 0.25rem;
             margin-top: 1rem;
             width: 24px;
         }
@@ -44,7 +45,7 @@
         display: flex;
     }
     .like-button {
-        margin-right: .75rem;
+        margin-right: 0.75rem;
     }
     .track-container {
         @include list-itemtype-track;
@@ -62,11 +63,10 @@
         @include font-type(text);
         @include font-type(semibold);
         align-content: center;
-        background: $mass-white;
         display: flex;
         justify-content: space-between;
-        margin-bottom: .5rem;
-        padding: .5rem 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 1rem;
     }
     .single-project-tags {
         margin-bottom: 1rem;
@@ -87,12 +87,12 @@
             @include font-size(small);
         }
         .is-empty {
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
         p {
             @include font-size(small);
             @include font-type(light);
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
         .contact-team {
             margin-bottom: 1rem;
@@ -108,7 +108,7 @@
         margin-bottom: 1rem;
         li {
             flex-basis: 24%;
-            margin-right: .14rem;
+            margin-right: 0.14rem;
             position: relative;
             &:nth-child(4n) {
                 margin-right: 0;
@@ -118,18 +118,18 @@
             display: block;
         }
         img {
-            border-radius: .2rem;
+            border-radius: 50%;
             width: 100%;
         }
         .icon-badge {
             @include svg-size(1.2rem);
             background-color: $white;
             bottom: 5%;
-            fill: $primary-light;
-            padding: .1rem;
+            fill: $text-hover;
+            padding: 0.1rem;
             position: absolute;
             right: 5%;
-            stroke: $primary-light;
+            stroke: $text-hover;
         }
     }
 }

@@ -10,13 +10,14 @@ tg-select-import-user-lightbox {
         justify-content: center;
         padding-bottom: 1.5rem;
         .candidate-user-name {
-            margin-left: .5rem;
+            margin-left: 0.5rem;
         }
         .user-list-avatar {
             background-color: $red;
             height: 32px;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             width: 32px;
+            border-radius: 50%;
         }
     }
     .error {
@@ -33,16 +34,16 @@ tg-select-import-user-lightbox {
         display: flex;
         input {
             flex-grow: 2;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
         }
     }
     .search-user-mode {
         @include font-size(small);
         background: none;
         margin-top: 2rem;
-        padding: .5rem;
+        padding: 0.5rem;
         text-align: left;
-        transition: .2s;
+        transition: 0.2s;
         width: 100%;
         &:hover {
             color: $primary;
@@ -50,6 +51,6 @@ tg-select-import-user-lightbox {
     }
     label {
         display: block;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
     }
 }

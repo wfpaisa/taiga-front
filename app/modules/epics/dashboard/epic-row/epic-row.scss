@@ -8,7 +8,7 @@
     border-bottom: 1px solid $whitish;
     cursor: move;
     display: flex;
-    transition: background .2s;
+    transition: background 0.2s;
     &:hover {
         background-color: $primary-10;
         .icon-drag {
@@ -42,24 +42,24 @@
     .name {
         .icon {
             transform: rotate(180deg);
-            transition: all .2s;
+            transition: all 0.2s;
         }
     }
     .icon-drag {
-        @include svg-size(.75rem);
+        @include svg-size(0.75rem);
         cursor: move;
         fill: $whitish;
         opacity: 0;
-        transition: opacity .1s;
+        transition: opacity 0.1s;
     }
     .epic-pill {
         @include font-type(light);
         @include font-size(xsmall);
         background: $grayer;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         color: $white;
-        margin: 0 .5rem;
-        padding: .1rem .25rem;
+        margin: 0 0.5rem;
+        padding: 0.1rem 0.25rem;
     }
     .status {
         cursor: pointer;
@@ -69,16 +69,16 @@
         }
     }
     .icon-arrow-down {
-        @include svg-size(.7rem);
+        @include svg-size(0.7rem);
         fill: $gray-light;
-        margin-left: .1rem;
+        margin-left: 0.1rem;
     }
     .progress-bar,
     .progress-status {
         height: 1.5rem;
         left: 0;
         position: absolute;
-        top: .25rem;
+        top: 0.25rem;
     }
     .progress-bar {
         background-color: $grey-05;
@@ -93,8 +93,8 @@
     .vote {
         color: $gray;
         &.is-voter {
-            color: $primary-light;
-            fill: $primary-light;
+            color: $text-hover;
+            fill: $text-hover;
         }
     }
     .assigned {
@@ -103,9 +103,9 @@
         }
     }
     .icon-upvote {
-        @include svg-size(.75rem);
+        @include svg-size(0.75rem);
         fill: $gray;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
         vertical-align: middle;
     }
     .is-unassigned {
@@ -114,9 +114,9 @@
     .epic-statuses {
         @include font-type(light);
         @include font-size(small);
-        background: rgba($blackish, .9);
+        background: rgba($blackish, 0.9);
         border-bottom: 1px solid $grayer;
-        box-shadow: 3px 3px 2px rgba($black, .1);
+        box-shadow: 3px 3px 2px rgba($black, 0.1);
         color: $white;
         left: 0;
         list-style-type: none;
@@ -130,10 +130,10 @@
             border: 0;
         }
         li {
-            padding: .5rem;
+            padding: 0.5rem;
             &:hover {
-                color: $primary-light;
-                transition: color .3s linear;
+                color: $text-hover;
+                transition: color 0.3s linear;
             }
         }
     }

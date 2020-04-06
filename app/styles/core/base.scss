@@ -11,6 +11,7 @@ html {
 }
 body {
     @include font-type(text);
+    background: $body;
     line-height: 1.3;
     min-height: 100%;
     overflow-x: hidden;
@@ -51,52 +52,59 @@ body {
 
 .menu-secondary {
     @include sidebar-wide-width();
-    background-color: $grey-02;
-    border-right: 1px solid darken($grey-02, 3%);
+    background-color: #0d153c;
     flex: 0 0 auto;
     min-height: $main-height;
     min-width: 0;
     padding: 1rem;
+    border-radius: 12px;
+    color: $white;
+    margin: 6px;
+
+    h1 {
+        color: $white;
+    }
     .search-in {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
     }
     .settings-nav {
         background-color: $grey-05;
     }
     ul li {
+        padding: 0 1rem;
         a {
-            color: $grey-60;
+            color: $white;
+            padding: 0.5rem;
         }
-        &:hover,
-        &:hover a {
-            background: lighten($grey-02, 3%);
-            color: lighten($grey-60, 5%);
-        }
+        // &:hover,
+        a:hover,
         .active {
-            background: lighten($grey-02, 6%);
-            color: lighten($grey-60, 10%);
+            //   background: $primary-75;
+            //   border-radius: 6px;
+            background: none;
+            color: $text-hover;
         }
     }
 }
 
 .menu-tertiary {
     @include sidebar-narrow-width;
-    background-color: $tertiary;
-    border-right: 1px solid darken($tertiary, 3%);
+    background-color: $white;
     flex: 0 0 auto;
     min-height: $main-height;
+    border-radius: 12px;
+    padding-top: 1.5rem;
+    margin: 6px;
+
     ul li {
+        padding: 0 1rem;
         a {
-            color: $grey-70;
+            color: $grey-40;
         }
-        &:hover,
-        &:hover a {
-            background: lighten($tertiary, 3%);
-            color: lighten($grey-70, 5%);
-        }
+        a:hover,
         .active {
-            background: lighten($tertiary, 6%);
-            color: lighten($grey-70, 10%);
+            background: none;
+            color: $text-hover;
         }
     }
 }
@@ -116,4 +124,22 @@ body {
 .hidden {
     // scss-lint:disable ImportantRule
     display: none !important;
+}
+
+.e2e-save-editor,
+.edit-value,
+.save {
+    &:hover {
+        .icon {
+            fill: $text-hover;
+        }
+    }
+}
+.e2e-cancel-editor,
+.cancel {
+    &:hover {
+        .icon {
+            fill: $red;
+        }
+    }
 }

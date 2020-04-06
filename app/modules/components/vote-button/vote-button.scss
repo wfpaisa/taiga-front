@@ -8,29 +8,38 @@
     }
     .vote-button {
         display: block;
-        padding: .3rem .7rem;
+        padding: 0.3rem 0.7rem;
         svg {
             height: 1.1rem;
-            transform: scaleX(.6);
+            transform: scaleX(0.6);
             width: 1.1rem;
         }
     }
     a {
-        background: darken($mass-white, 8.2%);
+        background: $text-hover;
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+        border-radius: 6px;
+
+        svg {
+            fill: $white;
+        }
+
         &:hover {
-            background: darken($gray-lighter, .5%);
-            transition: background .3s;
+            background-color: lighten($text-hover, 5%);
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
+            transition: background 0.3s;
         }
         &.voted {
-            background: $green-light;
+            background: $secondary;
+            box-shadow: 0 4px 12px transparentize($secondary, 0.2);
         }
         &.voted:hover {
-            background: $red-light;
-            padding-bottom: .2rem;
-            padding-top: .4rem;
+            background: $red;
+            box-shadow: 0 4px 12px transparentize($red, 0.2);
+            padding-bottom: 0.2rem;
+            padding-top: 0.4rem;
             svg {
-                fill: $white;
-                transform: scaleX(.6) rotate(180deg);
+                transform: scaleX(0.6) rotate(180deg);
             }
         }
     }

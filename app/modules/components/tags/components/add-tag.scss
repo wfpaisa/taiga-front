@@ -8,16 +8,16 @@ $tag-input-width: 250px;
     position: relative;
     width: $tag-input-width;
     input {
-        border-color: $gray-light;
         padding: 6px;
         width: 14rem;
+        margin-right: 6px;
     }
     .save {
         cursor: pointer;
         display: inline-block;
         fill: $grayer;
-        margin: .5rem 0 0 .5rem;
-        transition: .2s linear;
+        margin: 0.5rem 0 0 0.5rem;
+        transition: 0.2s linear;
         &:hover {
             fill: $primary;
         }
@@ -27,7 +27,7 @@ $tag-input-width: 250px;
         background: $white;
         border: 1px solid $gray-light;
         border-top: 0;
-        box-shadow: 2px 2px 3px rgba($black, .2);
+        box-shadow: 2px 2px 3px rgba($black, 0.2);
         left: 0;
         max-height: 20vh;
         min-height: 0;
@@ -41,7 +41,7 @@ $tag-input-width: 250px;
     .tags-dropdown-option {
         display: flex;
         justify-content: space-between;
-        padding: .5rem;
+        padding: 0.5rem;
     }
     .tags-dropdown-color {
         height: 1rem;
@@ -50,10 +50,10 @@ $tag-input-width: 250px;
     li {
         &:hover,
         &.selected {
-            background: lighten($primary-light, 50%);
+            background: lighten($text-hover, 50%);
             cursor: pointer;
-            transition: .2s;
-            transition-delay: .1s;
+            transition: 0.2s;
+            transition-delay: 0.1s;
         }
     }
 }

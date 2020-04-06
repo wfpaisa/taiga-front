@@ -30,35 +30,33 @@
 
     .detail-header-line {
         @include font-size(small);
-        margin: .5rem 0 0;
+        margin: 0.5rem 0 0;
         a {
             color: $primary;
-            padding: 0 .2rem;
+            padding: 0 0.2rem;
             &:hover {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
         .item-ref {
-            margin-right: .25rem;
+            margin-right: 0.25rem;
         }
     }
     .relate-to-epic {
-        margin: .5rem 1rem 0 0;
+        margin: 0.5rem 1rem 0 0;
 
         .relate-to-epic-button {
             align-content: flex-end;
             color: $gray-light;
             cursor: pointer;
             display: flex;
-            &:hover {
-                color: $primary-light;
-            }
+
             .icon-epics {
                 fill: currentColor;
-                margin-right: .25rem;
+                margin-right: 0.25rem;
             }
             .relate-to-epic-text {
-                font-size: .9375rem;
+                font-size: 0.9375rem;
             }
         }
     }
@@ -66,8 +64,8 @@
 
 .detail-title-wrapper {
     display: flex;
-    margin: 0 2rem .5rem 0;
-    transition: all .2s linear;
+    margin: 0 2rem 0.5rem 0;
+    transition: all 0.2s linear;
     .detail-title-text {
         color: $grayer;
         font-size: 1.75rem;
@@ -83,9 +81,9 @@
     }
     .detail-edit {
         cursor: pointer;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         opacity: 0;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         svg {
             @include svg-size(1.3rem);
         }
@@ -93,7 +91,7 @@
 
     .due-date-icon {
         position: relative;
-        top: .1rem;
+        top: 0.1rem;
         svg {
             @include svg-size(1.2rem);
         }
@@ -113,13 +111,13 @@
     .edit-title-button {
         background: none;
         display: inline;
-        transition: fill .2s;
+        transition: fill 0.2s;
         &:hover {
             fill: $primary;
         }
     }
     .save-title-button {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 }
 
@@ -130,18 +128,18 @@
     text-transform: uppercase;
     .section-name {
         color: $gray-lighter;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 }
 
 .block-desc-container {
-    padding: .25rem 0;
+    padding: 0.25rem 0;
     .block-description-title {
         @include font-type(semibold);
         background: $white;
         color: $red-light;
-        margin-right: .5rem;
-        padding: .1rem .25rem;
+        margin-right: 0.5rem;
+        padding: 0.1rem 0.25rem;
         text-transform: uppercase;
     }
 }

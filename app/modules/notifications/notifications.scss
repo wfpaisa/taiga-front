@@ -7,7 +7,7 @@
         background: $mass-white;
         display: flex;
         margin: 0;
-        padding: .5em 1em;
+        padding: 0.5em 1em;
     }
     .title {
         color: $primary;
@@ -21,13 +21,13 @@
     .action {
         color: $primary;
         font-size: 1em;
-        line-height: .75em;
+        line-height: 0.75em;
         margin-right: 1em;
         &.disabled {
             color: $gray-lighter;
         }
         &:not(.disabled):hover {
-            color: $primary-light;
+            color: $text-hover;
         }
     }
     .empty {
@@ -37,11 +37,13 @@
     }
     .notifications-list .entry {
         align-items: center;
-        font-size: .95rem;
-        margin: .5rem 0;
-        padding: 1rem .6rem;
+        font-size: 0.95rem;
+        margin: 0.5rem 0;
+        padding: 1rem 0.6rem;
+        border-radius: 6px;
+
         &.new {
-            background-color: $primary-lighter;
+            background-color: $grey-03;
         }
         .entry-content {
             font-size: 1.05rem;
@@ -58,8 +60,8 @@
             width: 3rem;
         }
         .entry-date {
-            font-size: .85rem;
-            margin-right: .5rem;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
         }
     }
 }
@@ -68,9 +70,9 @@
     .entry {
         color: $blackish;
         display: flex;
-        font-size: .9rem;
-        margin: 0 .8rem;
-        padding: .8rem 0;
+        font-size: 0.9rem;
+        margin: 0 0.8rem;
+        padding: 0.8rem 0;
         position: relative;
         &:not(:last-child) {
             border-bottom: 1px solid $whitish;
@@ -89,38 +91,39 @@
                 color: $primary;
             }
             &:hover {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
         .entry-avatar {
-            border-radius: .1rem;
+            border-radius: 0.1rem;
             flex-basis: 2.5rem;
             flex-shrink: 0;
-            margin-right: .7rem;
+            margin-right: 0.7rem;
             vertical-align: center;
             width: 2.5rem;
             img {
                 width: 100%;
+                border-radius: 50%;
             }
         }
         .entry-content {
             flex-grow: 1;
             line-height: 1.1em;
-            margin-right: .7rem;
+            margin-right: 0.7rem;
         }
         .entry-project {
             @include font-type(semibold);
             color: $gray-lighter;
             display: inline-block;
-            font-size: .9rem;
-            margin-top: .5em;
+            font-size: 0.9rem;
+            margin-top: 0.5em;
             max-width: 200px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
         .entry-date {
-            font-size: .7rem;
+            font-size: 0.7rem;
             white-space: nowrap;
         }
     }

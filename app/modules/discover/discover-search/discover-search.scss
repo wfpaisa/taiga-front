@@ -18,7 +18,7 @@
     .searchbox-filters {
         position: absolute;
         right: 1rem;
-        top: .7rem;
+        top: 0.7rem;
         width: auto;
         input {
             display: none;
@@ -28,11 +28,11 @@
             color: $gray-light;
             cursor: pointer;
             display: inline-block;
-            padding: .4rem .75rem;
-            transition: all .2s;
-            transition-delay: .2s;
+            padding: 0.4rem 0.75rem;
+            transition: all 0.2s;
+            transition-delay: 0.2s;
             &.active {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
             }
             &:hover {
@@ -76,16 +76,16 @@
         flex-basis: 300px;
         justify-content: flex-end;
         svg {
-            @include svg-size(.7rem);
+            @include svg-size(0.7rem);
             fill: $gray-light;
-            margin-right: .2rem;
+            margin-right: 0.2rem;
         }
     }
     .statistic {
         @include font-size(small);
         color: $gray-light;
         display: inline-block;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         svg {
             fill: $gray-light;
             stroke: $gray-light;

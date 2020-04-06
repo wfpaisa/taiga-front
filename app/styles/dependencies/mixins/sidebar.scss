@@ -57,7 +57,7 @@
 
 @mixin sidebar-medium-width-hidden {
     width: 0;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     > * {
         transform: translateX(-300px);
         @include until($ultrawide) {
@@ -89,22 +89,22 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     transform: translateX(-300px);
     @include until($ultrawide) {
-        transform: translateX(-260px);
+        transform: translateX(-400px);
     }
     @include until($fullhd) {
-        transform: translateX(-240px);
+        transform: translateX(-320px);
     }
     @include until($widescreen) {
-        transform: translateX(-220px);
+        transform: translateX(-300px);
     }
     @include until($desktop) {
-        transform: translateX(-200px);
+        transform: translateX(-300px);
     }
     @include until($tablet) {
-        transform: translateX(-180px);
+        transform: translateX(-380px);
     }
     &.open {
         transform: translateX(0);

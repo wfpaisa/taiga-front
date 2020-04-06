@@ -12,6 +12,10 @@
     right: 0;
     top: 0;
     z-index: 999;
+    color: rgba($white, 0.6);
+    a {
+        color: rgba($text-hover, 0.6);
+    }
     .auth-container {
         flex-basis: 400px;
     }
@@ -43,23 +47,23 @@
         margin-bottom: 1rem;
     }
     fieldset {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
     .login-text,
     .register-text {
-        font-size: .875rem;
+        font-size: 0.875rem;
         margin-top: 2rem;
         padding-bottom: 1rem;
         text-align: center;
         a {
             text-decoration: underline;
             &:hover {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
     }
     .register-terms {
-        margin: .5rem 0 .75rem;
+        margin: 0.5rem 0 0.75rem;
     }
     .button {
         color: $white;
@@ -78,14 +82,14 @@
     animation-iteration-count: infinite;
     animation-name: moustache;
     animation-timing-function: ease-in-out;
-    fill: rgba($primary, .9);
-    stroke: $primary-light;
+    fill: rgba($primary, 0.9);
+    stroke: $text-hover;
     stroke-width: 1px;
     transform-origin: 50% 50%;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
-        fill: rgba($primary-light, .9);
-        transition: .3s;
+        fill: rgba($text-hover, 0.9);
+        transition: 0.3s;
     }
 }
 @keyframes moustache {

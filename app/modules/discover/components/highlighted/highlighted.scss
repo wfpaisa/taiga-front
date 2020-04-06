@@ -34,9 +34,9 @@
         justify-content: space-between;
         margin-bottom: 1rem;
         svg {
-            @include svg-size(.8rem);
+            @include svg-size(0.8rem);
             fill: $gray-light;
-            margin-left: .5rem;
+            margin-left: 0.5rem;
         }
     }
     .title-wrapper {
@@ -45,7 +45,7 @@
         svg {
             @include svg-size(1.25rem);
             fill: $gray-light;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
         }
     }
     .title {
@@ -93,15 +93,14 @@
     }
 }
 
-
 .filter-highlighted {
     position: relative;
     .current-filter {
         padding: 1rem;
         span {
-            margin-left: .2rem;
+            margin-left: 0.2rem;
             position: relative;
-            top: .2rem;
+            top: 0.2rem;
         }
         &:hover {
             svg {
@@ -115,10 +114,10 @@
         right: 0;
         top: 1.5rem;
         &.ng-enter {
-            animation: dropdownFade .2s ease-in;
+            animation: dropdownFade 0.2s ease-in;
         }
         &.ng-leave {
-            animation: dropdownFade .2s ease-in;
+            animation: dropdownFade 0.2s ease-in;
             animation-direction: reverse;
         }
     }
@@ -127,9 +126,9 @@
         color: $white;
         cursor: pointer;
         min-width: 8rem;
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
         &:hover {
-            background: rgba($primary-light, .4);
+            background: rgba($text-hover, 0.4);
         }
     }
 }
@@ -141,7 +140,7 @@
     flex-basis: 9rem;
     min-height: 9rem;
     padding: 1.5rem 0;
-    &:nth-last-child(-n+2) {
+    &:nth-last-child(-n + 2) {
         border-bottom: 0;
     }
     .project-logo {
@@ -151,6 +150,7 @@
         width: 3rem;
         img {
             width: 100%;
+            border-radius: 50%;
         }
     }
     .project-data-container {
@@ -165,7 +165,7 @@
         @include font-size(large);
         @include font-type(text);
         display: inline-block;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         a {
             color: $grey-90;
             &:hover {
@@ -183,16 +183,16 @@
         flex-basis: 140px;
         justify-content: flex-end;
         svg {
-            @include svg-size(.75rem);
+            @include svg-size(0.75rem);
             fill: $gray-light;
-            margin-right: .25rem;
+            margin-right: 0.25rem;
         }
     }
     .statistic {
         @include font-size(small);
         color: $gray-light;
         display: inline-block;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         &.active {
             color: $primary;
             svg {

@@ -1,15 +1,19 @@
 $label-arrow-wh: 12px;
 
 tg-project-menu {
-    background-color: $grey-30;
+    background-color: $white;
     background-position: 0 -300px;
     display: inline-block;
     min-height: calc(100vh - 40px);
     min-width: 50px;
     padding: 1rem 0;
     position: relative;
-    text-transform: uppercase;
+    //   text-transform: uppercase;
     z-index: 99;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 6px;
+    border-radius: 6px;
+
     .menu {
         &.menu-fixed {
             position: fixed;
@@ -25,40 +29,44 @@ tg-project-menu {
     text-align: center;
     a {
         display: block;
-        padding: 1rem .7rem;
+        padding: 1rem 0.7rem;
         position: relative;
     }
     li {
         position: relative;
     }
     a:hover {
-        background: rgba($black, .2);
-        transition: color .3s linear;
+        // background: rgba($black, 0.2);
+        transition: color 0.3s linear;
         svg {
-            fill: $white;
-            stroke: $white;
+            fill: $text-hover;
+            stroke: $text-hover;
         }
         .helper {
             @include font-size(small);
             animation: slideLeft 200ms ease-in-out both;
-            background: linear-gradient(to right, rgba($black, 1) 0%, rgba($black, .8) 100%);
-            color: $white;
+            background: linear-gradient(
+                to right,
+                rgba($black, 1) 0%,
+                rgba($black, 0.8) 100%
+            );
+            color: $grey-40;
             display: block;
             left: 50px;
             opacity: 1;
-            padding: .4rem 1rem;
+            padding: 0.4rem 1rem;
             position: absolute;
             top: calc(50% - 1rem);
-            transition: all .2s;
+            transition: all 0.2s;
             white-space: nowrap;
             z-index: 99;
             &::after {
                 background: rgba($blackish, 1);
                 content: '';
                 height: $label-arrow-wh;
-                left: calc(-#{$label-arrow-wh}/2);
+                left: calc(-#{$label-arrow-wh}/ 2);
                 position: absolute;
-                top: calc(50% - #{$label-arrow-wh}/2);
+                top: calc(50% - #{$label-arrow-wh}/ 2);
                 transform: rotate(45deg);
                 width: $label-arrow-wh;
                 z-index: 98;
@@ -66,7 +74,7 @@ tg-project-menu {
         }
     }
     svg {
-        fill: $white;
+        fill: $grey-40;
         height: 1.7rem;
         width: 1.7rem;
         path {
@@ -88,11 +96,11 @@ tg-project-menu {
         @include font-size(large);
     }
     .active {
-        background: rgba($white, .95);
+        background: rgba($white, 0.95);
         color: $secondary-dark;
         svg {
-            fill: $grey-40;
-            stroke: $grey-40;
+            fill: $text-hover;
+            stroke: $text-hover;
         }
     }
 }
@@ -109,27 +117,31 @@ tg-project-menu {
 .backlog-sprints-menu {
     @include font-size(small);
     animation: slideLeft 200ms ease-in-out both;
-    background: linear-gradient(to right, rgba($black, 1) 0%, rgba($black, .8) 100%);
-    color: $white;
+    background: linear-gradient(
+        to right,
+        rgba($black, 1) 0%,
+        rgba($black, 0.8) 100%
+    );
+    color: $grey-40;
     display: block;
     left: 50px;
     opacity: 1;
-    padding: .4rem 1rem;
+    padding: 0.4rem 1rem;
     position: absolute;
     top: 1rem;
-    transition: all .2s;
+    transition: all 0.2s;
     white-space: nowrap;
     z-index: 99;
     a {
-        color: $white;
-        padding: .6rem .8rem;
+        color: $grey-40;
+        padding: 0.6rem 0.8rem;
         text-align: left;
         text-transform: none;
         &:nth-child(2) {
-            padding: 1rem .8rem .6rem;
+            padding: 1rem 0.8rem 0.6rem;
         }
         &:last-child {
-            padding: .6rem .8rem .4rem;
+            padding: 0.6rem 0.8rem 0.4rem;
         }
         &:hover {
             background: none;
@@ -139,9 +151,9 @@ tg-project-menu {
         background: rgba($blackish, 1);
         content: '';
         height: $label-arrow-wh;
-        left: calc(-#{$label-arrow-wh}/2);
+        left: calc(-#{$label-arrow-wh}/ 2);
         position: absolute;
-        top: calc(1rem - #{$label-arrow-wh}/2);
+        top: calc(1rem - #{$label-arrow-wh}/ 2);
         transform: rotate(45deg);
         width: $label-arrow-wh;
         z-index: 98;

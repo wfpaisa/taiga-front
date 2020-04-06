@@ -1,6 +1,6 @@
 .table-team {
     .row {
-        padding: .5rem;
+        padding: 0.5rem;
     }
     .username {
         flex-basis: 220px;
@@ -28,7 +28,7 @@
             color: $grayer;
         }
         .top {
-            fill: $primary-light;
+            fill: $text-hover;
             opacity: 1;
         }
         &:hover {
@@ -41,15 +41,15 @@
         @include font-size(small);
         color: $red-light;
         .icon {
-            @include svg-size(.8rem);
+            @include svg-size(0.8rem);
             fill: currentColor;
-            margin-right: .2rem;
+            margin-right: 0.2rem;
         }
         &:hover {
             color: $red;
             .icon {
                 color: currentColor;
-                transition: fill .3s linear;
+                transition: fill 0.3s linear;
             }
         }
     }
@@ -102,9 +102,9 @@
         @include popover(100%, '', 0, 30px, '', 15px, '', 50%, -5px);
     }
     .icon-badge {
-        fill: $primary-light;
+        fill: $text-hover;
         position: relative;
-        stroke: $primary-light;
-        top: .15rem;
+        stroke: $text-hover;
+        top: 0.15rem;
     }
 }

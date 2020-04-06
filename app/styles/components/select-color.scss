@@ -4,17 +4,17 @@
     padding: 15px;
     li {
         float: left;
-        margin: 0 .5rem .5rem 0;
+        margin: 0 0.5rem 0.5rem 0;
         &:nth-child(7n) {
             margin-right: 0;
         }
-        &:nth-last-child(-n+7) {
+        &:nth-last-child(-n + 7) {
             margin-bottom: 0;
         }
     }
     .color {
         background-color: $gray-light;
-        border-radius: 2px;
+        border-radius: 50%;
         cursor: pointer;
         height: 35px;
         width: 35px;
@@ -37,7 +37,7 @@
     }
     .selected-color {
         background: $gray-light;
-        border-radius: 2px;
+        border-radius: 50%;
         cursor: pointer;
         float: right;
         height: 40px;

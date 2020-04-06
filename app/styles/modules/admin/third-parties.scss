@@ -14,7 +14,7 @@
     label {
         @include font-type(text);
         display: block;
-        margin-bottom: .2rem;
+        margin-bottom: 0.2rem;
     }
     textarea {
         height: 10rem;
@@ -25,19 +25,20 @@
         }
         .option-wrapper {
             align-items: center;
-            border: 1px solid $gray-light;
-            border-left: 0;
-            border-radius: 0 5px 5px 0;
+            background: $white;
+            border: 1px solid $grey-05;
+            border-radius: 6px;
             cursor: pointer;
             display: flex;
             padding: 0 1rem;
+            margin-left: 6px;
         }
         .help-copy {
             @include font-size(small);
             opacity: 0;
             &.visible {
                 opacity: 1;
-                transition: opacity .2s linear;
+                transition: opacity 0.2s linear;
             }
         }
     }

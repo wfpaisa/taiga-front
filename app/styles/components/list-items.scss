@@ -5,7 +5,7 @@
     @include list-itemtype-track;
     border-bottom: 1px solid $whitish;
     display: flex;
-    padding: .5rem;
+    padding: 0.5rem;
     padding-right: 0;
     h2 {
         @include font-type(text);
@@ -20,10 +20,11 @@
     .list-itemtype-avatar {
         flex-basis: 3rem;
         flex-shrink: 0;
-        margin-right: .75rem;
+        margin-right: 0.75rem;
         min-width: 3rem;
         img {
             width: 100%;
+            border-radius: 50%;
         }
     }
 }
@@ -35,7 +36,7 @@
         @include font-size(large);
     }
     .icon-blocked-project {
-        @include svg-size(.75rem);
+        @include svg-size(0.75rem);
     }
     .icon {
         fill: $grey-70;
@@ -46,17 +47,18 @@
         .icon-private {
             fill: $gray-light;
             height: 22px;
-            margin-left: .5rem;
-            padding-top: .5rem;
+            margin-left: 0.5rem;
+            padding-top: 0.5rem;
             width: 22px;
         }
     }
     .list-itemtype-project-image {
         flex-shrink: 0;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         width: 3rem;
         img {
             width: 100%;
+            border-radius: 50%;
         }
     }
     .list-itemtype-project-members {
@@ -67,15 +69,15 @@
         flex-wrap: wrap-reverse;
         margin-top: 1rem;
         img {
-            border-radius: .1rem;
-            margin-right: .3rem;
+            border-radius: 0.1rem;
+            margin-right: 0.3rem;
             width: 2rem;
         }
     }
     .tag {
         align-self: flex-end;
-        margin: 0 .25rem .25rem 0;
-        padding: .5rem;
+        margin: 0 0.25rem 0.25rem 0;
+        padding: 0.5rem;
     }
 }
 
@@ -87,10 +89,10 @@
     }
     .ticket-type,
     .ticket-project {
-        margin-right: .3rem;
+        margin-right: 0.3rem;
     }
     .ticket-type {
-        margin-left: .3rem;
+        margin-left: 0.3rem;
         text-transform: uppercase;
     }
     .ticket-project {
@@ -105,10 +107,9 @@
     }
     .ticket-blocked {
         color: $red;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
     }
 }
-
 
 .list-itemtype-user {
     @include list-itemtype-common;
@@ -118,6 +119,6 @@
     .extra-info {
         @include font-size(small);
         @include font-type(light);
-        margin-top: .25rem;
+        margin-top: 0.25rem;
     }
 }

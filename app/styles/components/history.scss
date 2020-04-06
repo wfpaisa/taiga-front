@@ -4,7 +4,7 @@
     flex-direction: row;
     a {
         display: inline-block;
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
         &:hover {
             color: $primary;
         }
@@ -13,7 +13,7 @@
         @include font-type(semibold);
         border-bottom: 3px solid transparent;
         color: $gray-light;
-        transition: all .1s linear;
+        transition: all 0.1s linear;
         &.active {
             border-bottom: 3px solid $grayer;
             color: $grayer;
@@ -27,6 +27,6 @@
     }
     .icon-arrow-up,
     .icon-arrow-down {
-        @include svg-size(.75rem);
+        @include svg-size(0.75rem);
     }
 }

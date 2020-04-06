@@ -2,7 +2,7 @@
     align-items: center;
     background: $mass-white;
     display: flex;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     padding: 1rem;
     .color-column {
         cursor: pointer;
@@ -27,7 +27,7 @@
             @include empty-color(38);
         }
     }
-    input[type="text"] {
+    input[type='text'] {
         background: $white;
     }
     .icon {
@@ -40,12 +40,12 @@
 
 .tags-table {
     .table-tags-editor {
-        input[type="text"] {
+        input[type='text'] {
             background-color: transparent;
             border: 0;
             border-bottom: 1px solid transparent;
             box-shadow: none;
-            transition: border-bottom .2s linear;
+            transition: border-bottom 0.2s linear;
             &:focus {
                 border-bottom: 1px solid $gray;
                 outline: none;
@@ -78,8 +78,8 @@
     }
     .row {
         &.tag-row {
-            margin: .3rem 0;
-            padding: .7rem;
+            margin: 0.3rem 0;
+            padding: 0.7rem;
             &:hover {
                 cursor: default;
             }
@@ -109,20 +109,20 @@
     }
     .mixing-tags-from,
     .mixing-tags-to {
-        background: lighten(rgba($primary-light, .2), 30%);
+        background: lighten(rgba($text-hover, 0.2), 30%);
     }
     .mixing-confirm {
-        margin: 0 .5rem;
+        margin: 0 0.5rem;
     }
     .mixing-help-text {
         @include font-size(xsmall);
         color: $primary-dark;
         display: inline;
-        padding-right: .5rem;
+        padding-right: 0.5rem;
         text-align: center;
         @include until($widescreen) {
             display: block;
-            padding: .5rem;
+            padding: 0.5rem;
         }
     }
     .current-color {

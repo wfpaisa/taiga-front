@@ -13,7 +13,7 @@
         align-items: center;
         border-bottom: 1px solid $gray-light;
         display: flex;
-        padding: .5rem 0 .5rem .5rem;
+        padding: 0.5rem 0 0.5rem 0.5rem;
         text-align: left;
         width: 100%;
     }
@@ -56,15 +56,15 @@
             }
         }
         &.is-voted {
-            color: $primary-light;
-            fill: $primary-light;
+            color: $text-hover;
+            fill: $text-hover;
         }
         svg {
             fill: $gray;
-            height: .75rem;
-            margin-right: .25rem;
+            height: 0.75rem;
+            margin-right: 0.25rem;
             vertical-align: middle;
-            width: .75rem;
+            width: 0.75rem;
         }
     }
     .status,
@@ -81,9 +81,9 @@
             }
         }
         .icon {
-            @include svg-size(.75rem);
+            @include svg-size(0.75rem);
             fill: currentColor;
-            margin-left: .2rem;
+            margin-left: 0.2rem;
         }
     }
     .pop-status {
@@ -98,7 +98,7 @@
         @include popover(200px, 0, 65%, '', '');
         a {
             &.active {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
             }
         }
@@ -124,7 +124,7 @@
             text-align: center;
             &:hover,
             &.active {
-                background: $primary-light;
+                background: $text-hover;
                 color: $white;
             }
         }
@@ -151,7 +151,7 @@
 
 .backlog-table-body {
     &.forecasted-stories {
-        border: .5rem solid $mass-white;
+        border: 0.5rem solid $mass-white;
         border-bottom: 0;
     }
     .row {
@@ -171,8 +171,8 @@
         }
         &.gu-mirror {
             background: lighten($primary, 60%);
-            box-shadow: 1px 1px 10px rgba($black, .1);
-            opacity: .9;
+            box-shadow: 1px 1px 10px rgba($black, 0.1);
+            opacity: 0.9;
         }
         .points {
             .not-clickable:hover {
@@ -182,8 +182,8 @@
         }
         .icon-arrow-down {
             fill: $gray-light;
-            height: .7rem;
-            width: .7rem;
+            height: 0.7rem;
+            width: 0.7rem;
         }
     }
     .gu-transit {
@@ -202,8 +202,8 @@
     }
     input {
         &:checked {
-            color: $primary-light;
-            transition: color .2s ease-in;
+            color: $text-hover;
+            transition: color 0.2s ease-in;
         }
     }
     .user-story-name {
@@ -221,11 +221,11 @@
     }
     .tags-block {
         display: none;
-        margin-bottom: .3rem;
+        margin-bottom: 0.3rem;
         .tag {
             @include font-size(small);
-            margin-right: .5rem;
-            padding: .2rem .5rem;
+            margin-right: 0.5rem;
+            padding: 0.2rem 0.5rem;
         }
     }
     .blocked {
@@ -258,10 +258,10 @@
         opacity: 0;
         svg {
             fill: $gray-light;
-            margin-right: .5rem;
-            transition: fill .2s ease-in;
+            margin-right: 0.5rem;
+            transition: fill 0.2s ease-in;
             &:hover {
-                fill: $primary-light;
+                fill: $text-hover;
             }
         }
     }
@@ -269,7 +269,7 @@
         cursor: move;
         fill: $gray-light;
         opacity: 0;
-        padding: .1rem;
+        padding: 0.1rem;
     }
     .readonly {
         cursor: auto;

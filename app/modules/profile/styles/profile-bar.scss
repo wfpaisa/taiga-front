@@ -7,24 +7,25 @@
         &.is-current-user:hover {
             img {
                 filter: brightness(40%) saturate(150%) hue-rotate(60deg);
-                transition: all .2s cubic-bezier(.01, .7, 1, 1);
+                transition: all 0.2s cubic-bezier(0.01, 0.7, 1, 1);
             }
             .profile-edition {
                 opacity: 1;
                 transform: translateY(0);
-                transition: all .2s cubic-bezier(.01, .7, 1, 1);
-                transition-delay: .3s;
+                transition: all 0.2s cubic-bezier(0.01, 0.7, 1, 1);
+                transition-delay: 0.3s;
             }
         }
     }
     .profile-img {
         max-width: 100%;
         width: 100%;
+        border-radius: 50%;
     }
     .profile-edition {
         @include font-size(large);
         @include font-type(light);
-        background: rgba($black, .4);
+        background: rgba($black, 0.4);
         bottom: 0;
         color: $white;
         left: 0;
@@ -35,10 +36,9 @@
         transform: translateY(100%);
         width: 100%;
         &:hover {
-            background: rgba($black, .8);
-            transition: all .3s cubic-bezier(.01, .7, 1, 1);
+            background: rgba($black, 0.8);
+            transition: all 0.3s cubic-bezier(0.01, 0.7, 1, 1);
         }
-
     }
     .button-green {
         display: block;
@@ -54,12 +54,12 @@
         width: 12px;
         path {
             fill: $gray-light;
-            transition: all .2s linear;
+            transition: all 0.2s linear;
         }
         &:hover {
             path {
                 fill: $red;
-                transition: all .2s linear;
+                transition: all 0.2s linear;
             }
         }
     }
@@ -67,7 +67,7 @@
         @include font-type(semibold);
         @include font-size(xlarge);
         line-height: 1.2;
-        margin-bottom: .25rem;
+        margin-bottom: 0.25rem;
         text-transform: none;
         word-wrap: break-word;
     }
@@ -93,7 +93,7 @@
         svg {
             position: relative;
             top: 2px;
-            width: .75rem;
+            width: 0.75rem;
         }
         path {
             fill: $gray-light;
@@ -106,9 +106,9 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.25rem;
-        padding: 1rem .5rem;
+        padding: 1rem 0.5rem;
         .stat {
-            padding: 0 .2rem;
+            padding: 0 0.2rem;
             text-align: center;
         }
         .stat-number {
@@ -128,6 +128,6 @@
         @include font-size(large);
         background: url('../images/quote.png') no-repeat top left;
         line-height: 1.4;
-        padding: .5rem;
+        padding: 0.5rem;
     }
 }

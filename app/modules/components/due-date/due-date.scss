@@ -1,10 +1,10 @@
 .due-date-button {
     background: $gray-light;
     display: inline-block;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     padding: 1rem;
-    transition: background .2s linear;
-    transition-delay: .1s;
+    transition: background 0.2s linear;
+    transition-delay: 0.1s;
     &.closed,
     &.text-button.closed:hover {
         background: $gray-lighter;
@@ -12,8 +12,8 @@
     }
     &.due-set,
     &.text-button.due-set:hover {
-        background: $primary-light;
-        border-color: $primary-light;
+        background: $text-hover;
+        border-color: $text-hover;
     }
     &.due-soon,
     &.text-button.due-soon:hover {
@@ -34,7 +34,7 @@
     &.text-button {
         color: $white;
         margin: 0;
-        padding: .5rem;
+        padding: 0.5rem;
         &.not-set:hover {
             color: $white;
         }
@@ -46,11 +46,11 @@
 
 .due-date-icon {
     display: inline-block;
-    margin: 0 .25rem;
+    margin: 0 0.25rem;
     position: relative;
     svg {
         fill: $gray-light;
-        transition: fill .2s ease-in;
+        transition: fill 0.2s ease-in;
     }
     &.closed svg {
         fill: $gray-lighter;
@@ -69,19 +69,19 @@
 .backlog-table-body .user-story-name,
 .related-tasks .task-name {
     .due-date-icon {
-        top: .1rem;
+        top: 0.1rem;
     }
 }
 
 .issues-table .subject .due-date-icon {
-    top: .25rem;
+    top: 0.25rem;
 }
 
 .card-statistics .due-date-icon {
-    margin: .1rem 0 0;
+    margin: 0.1rem 0 0;
     svg {
-        height: .9rem;
-        width: .9rem;
+        height: 0.9rem;
+        width: 0.9rem;
     }
 }
 
@@ -110,7 +110,7 @@
 }
 
 .date-picker-popover-footer {
-    padding: .2rem .5rem;
+    padding: 0.2rem 0.5rem;
     text-align: right;
     svg {
         fill: $gray;

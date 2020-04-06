@@ -5,27 +5,33 @@ fieldset {
     position: relative;
     width: 100%;
 }
-input[type="text"],
-input[type="number"],
-input[type="password"],
-input[type="url"],
-input[type="email"],
-input[type="date"],
-input[type="password"],
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='url'],
+input[type='email'],
+input[type='date'],
+input[type='password'],
 select,
 textarea {
-    background: $grey-02;
-    border: 1px solid $gray-light;
+    background: $white;
+    border: 1px solid $grey-05;
+    // border:none;
+    border-radius: 3px;
     color: $grayer;
     margin: 0;
     padding: 8px;
     width: 100%;
+    outline: none;
+    &:focus {
+        box-shadow: 0 0 0 4px transparentize($text-hover, 0.8);
+    }
     @include placeholder {
         color: $gray-lighter;
     }
     &.checksley-error {
         border: 1px solid $red;
-        transition: border .3s linear;
+        transition: border 0.3s linear;
     }
 }
 button,
@@ -43,23 +49,23 @@ textarea {
 .checksley-error-list {
     margin-bottom: 0;
     li {
-        padding: .2rem;
+        padding: 0.2rem;
     }
 }
 .capslock {
     &.ng-enter {
-        animation: dropdownFade .2s ease-in;
+        animation: dropdownFade 0.2s ease-in;
     }
     &.ng-leave {
-        animation: dropdownFade .2s ease-in;
+        animation: dropdownFade 0.2s ease-in;
         animation-direction: reverse;
     }
     .icon-capslock {
-        bottom: .8rem;
+        bottom: 0.8rem;
         fill: $gray;
-        height: .9rem;
+        height: 0.9rem;
         position: absolute;
         right: 1rem;
-        width: .9rem;
+        width: 0.9rem;
     }
 }

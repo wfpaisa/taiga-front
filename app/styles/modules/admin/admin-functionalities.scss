@@ -22,7 +22,7 @@
     .module-icon {
         flex-basis: 3rem;
         flex-shrink: 0;
-        margin: 0 .5rem 0 0;
+        margin: 0 0.5rem 0 0;
         .icon {
             @include svg-size(3rem);
             fill: $grey-50;
@@ -35,7 +35,7 @@
         color: $gray-light;
         flex-basis: 100px;
         flex-shrink: 0;
-        margin: 0 .5rem;
+        margin: 0 0.5rem;
     }
     .module-desc {
         @include font-size(small);
@@ -50,7 +50,7 @@
     .videoconference-attributes {
         align-items: flex-start;
         display: flex;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         .options {
             align-items: center;
             display: flex;
@@ -58,13 +58,13 @@
         }
         fieldset,
         .icon {
-            margin: 0 .5rem;
+            margin: 0 0.5rem;
         }
         .icon {
             fill: $gray-light;
-            &:hover {
-                fill: $primary;
-            }
+        }
+        a:hover .icon {
+            fill: $text-hover;
         }
     }
     .module-scrum {

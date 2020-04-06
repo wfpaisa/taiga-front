@@ -3,12 +3,12 @@
         margin-bottom: 1rem;
         .row {
             border-bottom: 0;
-            padding: .5rem 0;
+            padding: 0.5rem 0;
         }
         .row:hover {
             .webhook-options-wrapper {
                 opacity: 1;
-                transition: opacity .2s linear;
+                transition: opacity 0.2s linear;
             }
         }
     }
@@ -27,7 +27,7 @@
     }
     .webhook-service,
     .webhook-url {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
     .webhook-service {
         flex-basis: 20%;
@@ -47,10 +47,10 @@
         a {
             color: $primary;
             cursor: pointer;
-            margin-left: .5rem;
+            margin-left: 0.5rem;
             white-space: nowrap;
             &:hover {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
     }
@@ -62,19 +62,19 @@
         a {
             cursor: pointer;
             display: inline-block;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
         }
         svg {
             fill: $gray-light;
             &:hover {
                 fill: $primary;
-                transition: fill .2s linear;
+                transition: fill 0.2s linear;
             }
         }
     }
     .webhook-options-wrapper {
         opacity: 0;
-        transition: opacity .3s linear;
+        transition: opacity 0.3s linear;
     }
     .webhook-url-inputs {
         display: flex;
@@ -83,7 +83,7 @@
         justify-content: center;
         fieldset {
             flex-grow: 1;
-            margin-right: .3rem;
+            margin-right: 0.3rem;
         }
     }
 
@@ -100,11 +100,11 @@
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        padding: .5rem;
-        transition: background .2s linear;
+        padding: 0.5rem;
+        transition: background 0.2s linear;
         &:hover {
-            background: rgba($primary-light, .1);
-            transition: background .2s linear;
+            background: rgba($text-hover, 0.1);
+            transition: background 0.2s linear;
         }
         &.history-single-open {
             &:hover {
@@ -112,23 +112,23 @@
             }
             .icon-arrow-bottom {
                 transform: rotate(180deg);
-                transition: transform .3s linear;
+                transition: transform 0.3s linear;
             }
         }
         .icon-arrow-bottom {
             transform: rotate(0);
-            transition: transform .3s linear;
+            transition: transform 0.3s linear;
         }
     }
     .history-response-icon {
         background: $gray;
         border-radius: 25%;
         display: inline-block;
-        height: .8rem;
-        margin-right: .5rem;
-        width: .8rem;
+        height: 0.8rem;
+        margin-right: 0.5rem;
+        width: 0.8rem;
         &.history-success {
-            background: $primary-light;
+            background: $text-hover;
         }
         &.history-error {
             background: $red;
@@ -141,7 +141,7 @@
     .history-single-response-header {
         display: flex;
         justify-content: space-between;
-        padding: 1.5rem 0 .5rem;
+        padding: 1.5rem 0 0.5rem;
         span:first-child {
             @include font-type(semibold);
             color: $gray-light;
@@ -150,12 +150,12 @@
             @include font-size(small);
             color: $gray-light;
             &:hover {
-                color: $primary-light;
-                transition: color .2s linear;
+                color: $text-hover;
+                transition: color 0.2s linear;
             }
         }
         .icon {
-            margin-right: .3rem;
+            margin-right: 0.3rem;
             vertical-align: middle;
         }
     }
@@ -169,7 +169,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
         span {
             @include font-size(small);

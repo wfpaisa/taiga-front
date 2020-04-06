@@ -2,27 +2,27 @@
     .key {
         @include font-type(semibold);
         background: $whitish;
-        margin-right: .5rem;
-        padding: .25rem;
+        margin-right: 0.5rem;
+        padding: 0.25rem;
     }
     .diff {
         line-height: 1.6;
     }
     .icon-arrow-right {
-        @include svg-size(.75rem);
+        @include svg-size(0.75rem);
         fill: $gray-light;
-        margin: 0 .5rem;
+        margin: 0 0.5rem;
     }
     .diff-status-wrapper {
         p {
             display: inline-block;
         }
         ins {
-            background: lighten(rgba($primary-light, .3), 20%);
+            background: lighten(rgba($text-hover, 0.3), 20%);
             text-decoration: underline;
         }
         del {
-            background: rgba($red-light, .3);
+            background: rgba($red-light, 0.3);
         }
     }
     .diff-color-wrapper {

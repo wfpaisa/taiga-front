@@ -1,23 +1,24 @@
 .ticket-header {
     align-items: center;
     display: flex;
-    margin: .75rem 0;
+    margin: 0.75rem 0;
     position: relative;
     .ticket-title {
         @include font-size(larger);
         @include font-type(light);
         text-transform: uppercase;
         vertical-align: sub;
+        color: $white;
     }
     .detail-status {
         @include font-size(small);
         display: flex;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         position: relative;
         .icon-arrow-down {
-            @include svg-size(.75rem);
+            @include svg-size(0.75rem);
             fill: currentColor;
-            margin-left: .25rem;
+            margin-left: 0.25rem;
         }
     }
     .detail-status-inner {
@@ -26,8 +27,9 @@
         justify-content: flex-start;
         > span {
             color: $white;
-            padding: .15rem .25rem;
+            padding: 0.15rem 0.25rem;
             text-transform: uppercase;
+            border-radius: 6px;
         }
     }
     .pop-status {
@@ -36,18 +38,21 @@
         text-transform: none;
         a {
             @include font-type(text);
-            padding: .5rem 1rem;
+            padding: 0.5rem 1rem;
             text-align: left;
         }
         a:hover {
-            background: rgba($primary-light, .2);
+            background: rgba($text-hover, 0.2);
         }
     }
 }
 
 .ticket-data {
-    background: $grey-02;
     padding: 1rem;
+    background: $primary;
+    color: rgba($white, 0.6);
+    margin: 0 6px 6px 6px;
+    border-radius: 12px;
 }
 
 .ticket-data-container {
@@ -63,40 +68,50 @@
     }
 }
 
-
 @mixin category-choices() {
     align-content: center;
-    background: $whitish;
+    background: rgba($white, 0.1);
     display: flex;
-    margin-bottom: .5rem;
-    padding: .5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
     position: relative;
     width: 100%;
     .label,
     .level-name {
         align-items: center;
         display: inline-block;
-        font-size: .8rem;
-        margin-left: .5rem;
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
         max-width: 65px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
     .icon {
-        height: .6rem;
-        margin: 0 0 .125rem .125rem;
-        width: .6rem;
+        height: 0.6rem;
+        margin: 0 0 0.125rem 0.125rem;
+        width: 0.6rem;
     }
     .level-name {
         margin-left: auto;
         text-align: right;
     }
     .popover {
-        @include popover(150px, 30px, 30px, '', '', 0, '', '', '', 15px, 'left');
+        @include popover(
+            150px,
+            30px,
+            30px,
+            '',
+            '',
+            0,
+            '',
+            '',
+            '',
+            15px,
+            'left'
+        );
     }
 }
-
 
 .ticket-status {
     &:last-child {
@@ -112,8 +127,8 @@
     }
     .clickable {
         &:hover {
-            background: $gray-lighter;
-            transition: background .2s ease-in;
+            background: rgba($white, 0.1);
+            transition: background 0.2s ease-in;
         }
     }
     .type-data {
@@ -125,13 +140,16 @@
     .priority-data {
         @include category-choices;
     }
+    .icon {
+        fill: $white;
+    }
 }
 
 .ticket-section-label {
     @include font-type(semibold);
-    color: lighten($grayer, 11%);
+    color: $white;
     flex-grow: 1;
-    font-size: .875rem;
+    font-size: 0.875rem;
     text-transform: uppercase;
 }
 
@@ -170,42 +188,43 @@
 .ticket-user-list-container {
     position: relative;
     .ticket-user-list-content.loading {
-        opacity: .5;
+        opacity: 0.5;
         z-index: 98;
     }
 }
 
 .ticket-user-list {
-    margin: .25rem 0 0;
+    margin: 0.25rem 0 0;
     .is-iocaine {
         filter: hue-rotate(265deg) saturate(3);
     }
 
     .iocaine-symbol {
-        left: -.5rem;
+        left: -0.5rem;
         position: absolute;
-        top: -.5rem;
+        top: -0.5rem;
         z-index: 9;
         svg {
             background: $grayer;
-            border-radius: .25rem;
+            border-radius: 0.25rem;
             fill: $white;
             min-height: 1.5rem;
             min-width: 1.5rem;
-            padding: .25rem;
+            padding: 0.25rem;
         }
     }
     .user-list-single {
         align-content: center;
         align-items: center;
         display: flex;
-        padding: .25rem 0;
+        padding: 0.25rem 0;
         width: 100%;
+        border-radius: 6px;
         &:hover:not(.read-only) {
-            background: rgba($white, .4);
+            background: rgba($white, 0.1);
             cursor: pointer;
             .user-list-name {
-                color: $primary-light;
+                color: $text-hover;
             }
             .remove-user {
                 opacity: 1;
@@ -220,81 +239,84 @@
                 color: $primary;
             }
             .user-list-name a:hover {
-                color: $primary-light;
+                color: $text-hover;
             }
         }
     }
     .user-list-avatar {
         flex-basis: 3rem;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
         max-height: 3rem;
         max-width: 3rem;
         img {
             width: 100%;
+            border-radius: 50%;
         }
     }
     .user-list-name {
         flex-grow: 1;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 
     .remove-user {
         cursor: pointer;
         fill: $gray;
-        margin-right: .75rem;
+        margin-right: 0.75rem;
         opacity: 0;
-        padding: .5rem;
-        transition: all .2s ease-in;
+        padding: 0.5rem;
+        transition: all 0.2s ease-in;
         &:hover {
             fill: $red;
-            transition: color .3s ease-in;
+            transition: color 0.3s ease-in;
         }
         svg {
-            height: .9rem;
-            width: .9rem;
+            height: 0.9rem;
+            width: 0.9rem;
         }
     }
 }
 
 .ticket-users-actions {
     display: flex;
-    margin: .5rem -.25rem 0;
+    margin: 0.5rem -0.25rem 0;
     .ticket-users-action {
-        background: $white;
-        color: $gray;
+        background: rgba($white, 0.2);
+        color: $white;
         cursor: pointer;
         display: flex;
         flex-grow: 1;
-        font-size: .9rem;
+        font-size: 0.9rem;
         justify-content: center;
         line-height: 2rem;
-        margin: 0 .25rem;
+        margin: 0 0.25rem;
         text-align: center;
+        border-radius: 6px;
+
         svg {
-            fill: $gray;
-            height: .75rem;
-            width: .75rem;
+            fill: $white;
+            height: 0.75rem;
+            width: 0.75rem;
         }
         &:hover {
-            color: $primary-light;
+            color: $text-hover;
             svg {
-                fill: $primary-light;
+                fill: $text-hover;
             }
         }
     }
     .users-action.icon {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
 }
 
 .ticket-estimation .points-per-role {
-    margin: .5rem 0 0;
+    margin: 0.5rem 0 0;
 }
 
 .ticket-detail-settings {
     display: flex;
     justify-content: center;
-    margin-right: -.5rem;
+    margin-right: -0.5rem;
     margin-top: 1rem;
     label,
     .assign-issue-button,
@@ -302,40 +324,43 @@
     .item-unblock,
     .promote-button,
     .button-delete {
-        background: $grey-40;
+        background: $grey-30;
         display: inline-block;
         height: 55px;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         min-height: 55px;
         padding: 1rem;
-        transition: background .2s linear;
-        transition-delay: .1s;
+        transition: background 0.2s linear;
+        transition-delay: 0.1s;
+        box-shadow: none;
         @include until($ultrawide) {
-            padding: 1rem .9rem;
+            padding: 1rem 0.9rem;
         }
         @include until($fullhd) {
-            padding: 1rem .8rem;
+            padding: 1rem 0.8rem;
         }
         @include until($widescreen) {
-            padding: 1rem .7rem;
+            padding: 1rem 0.7rem;
         }
         @include until($desktop) {
-            padding: 1rem .6rem;
+            padding: 1rem 0.6rem;
         }
         @include until($tablet) {
-            padding: 1rem .5rem;
+            padding: 1rem 0.5rem;
         }
         &:hover {
-            background: $gray;
+            background: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
         }
         &.editable {
             cursor: pointer;
         }
-        +input {
+        + input {
             display: none;
         }
         &.active {
-            background: $grey-70;
+            background: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
         }
     }
 
@@ -343,10 +368,10 @@
         display: none;
 
         &:hover {
-            background: $yellow-green;
+            background: $secondary;
         }
         &.is-active {
-            background: $grey-70;
+            background: $text-hover;
             display: inline-block;
         }
         &.button-set:hover {
@@ -362,15 +387,20 @@
         }
     }
     .item-unblock {
-        background: $grey-70;
+        background: $text-hover;
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+
         &:hover {
             background: $red;
         }
     }
     .button-delete {
-        background: $red-light;
+        background: $red;
+        box-shadow: 0 4px 12px transparentize($red, 0.4);
+
         &:hover {
-            background: $red;
+            background-color: lighten($red, 5%);
+            box-shadow: 0 4px 12px transparentize($red, 0.2);
         }
     }
     img {

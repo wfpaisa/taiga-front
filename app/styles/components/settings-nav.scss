@@ -1,6 +1,7 @@
 .settings-nav {
     @include sidebar-narrow-width;
-    padding: 0;
+    padding: 1.5rem 0 0 0;
+    margin: 6px;
     .active {
         background: $white;
     }

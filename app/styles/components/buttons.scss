@@ -28,7 +28,7 @@
     }
     &.loading {
         span {
-            animation: loading .5s linear;
+            animation: loading 0.5s linear;
         }
     }
     span {
@@ -43,7 +43,7 @@
         box-shadow: none;
         color: $grey-30;
         cursor: not-allowed;
-        opacity: .65;
+        opacity: 0.65;
         &:hover {
             background-color: $grey-10;
             color: $grey-30;
@@ -51,7 +51,7 @@
     }
     &.button-small {
         border-radius: 0;
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
         width: 38px;
     }
     &.button-large {
@@ -74,30 +74,38 @@
 .button-green {
     @extend %button;
     background: $secondary;
+    box-shadow: 0 4px 12px transparentize($secondary, 0.4);
     &:hover,
     &.active,
     &:visited:hover {
-        background: lighten($secondary, 5%);
+        background: lighten($secondary, 1%);
+        box-shadow: 0 4px 12px transparentize($secondary, 0.2);
     }
 }
 
 .button-primary {
     @extend %button;
-    background: $primary;
+    background: $text-hover;
+    box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+
     &:hover,
     &.active,
     &:visited:hover {
-        background: lighten($primary, 5%);
+        background-color: lighten($text-hover, 5%);
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
     }
 }
 
 .button-gray {
     @extend %button;
-    background: $grey-50;
+    background: $text-hover;
+    box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+
     &:hover,
     &.active,
     &:visited:hover {
-        background: lighten($grey-50, 5%);
+        background: lighten($text-hover, 5%);
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
     }
 }
 .button-gray-light {
@@ -112,6 +120,7 @@
 .button-red {
     @extend %button;
     background: $red;
+    box-shadow: 0 4px 12px transparentize($red, 0.4);
 }
 .button-red-light {
     @extend %button;
@@ -133,10 +142,10 @@
     span,
     .icon {
         color: $blackish;
-        transition: color .2s linear;
+        transition: color 0.2s linear;
     }
     .icon {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
     &:visited {
         color: $blackish;
@@ -145,7 +154,7 @@
 
 .add-button svg {
     height: 1.25rem;
-    margin-bottom: -.2rem;
+    margin-bottom: -0.2rem;
     width: 1.25rem;
 }
 
@@ -176,7 +185,7 @@
 }
 .button-bulk {
     @include font-size(large);
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 }
 .button-auth {
     @extend %button;
@@ -188,7 +197,7 @@
     img {
         @include font-size(large);
         color: $white;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         vertical-align: middle;
     }
     &:hover {
@@ -201,7 +210,7 @@
     align-items: center;
     background: $tribe-primary;
     display: flex;
-    padding: .4rem;
+    padding: 0.4rem;
     padding-left: 1.5rem;
     &:hover,
     &.active {
@@ -209,7 +218,7 @@
         color: $white;
     }
     .tribe-logo {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         width: 1.5rem;
     }
 }
@@ -218,7 +227,7 @@
     @include font-size(small);
     color: $primary;
     display: inline-block;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
 .submit-button {
@@ -231,16 +240,18 @@
     margin-left: 1rem;
     position: relative;
     &:hover {
-        background: $gray-light;
+        background: $text-hover;
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+
         svg {
             fill: $whitish;
             stroke: $whitish;
         }
     }
     svg {
-        fill: $grey-90;
+        fill: $text-hover;
         height: 1.1rem;
-        stroke: $grey-90;
+        stroke: $text-hover;
         width: 1.1rem;
     }
     .filter-num {
@@ -252,9 +263,9 @@
         display: inline-flex;
         height: 1rem;
         justify-content: center;
-        left: -.5rem;
+        left: -0.5rem;
         position: absolute;
-        top: -.5rem;
+        top: -0.5rem;
         width: 1rem;
     }
 }
@@ -265,29 +276,33 @@
     width: 100%;
     input {
         display: none;
-        &:checked+label {
-            background-color: $grey-70;
+        &:checked + label {
+            background-color: $text-hover;
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
+
             color: $white;
         }
-        &:checked+label:hover {
-            background-color: $grey-70;
+        &:checked + label:hover {
+            background-color: lighten($text-hover, 5%);
+            box-shadow: 0 4px 12px transparentize($text-hover, 0.2);
         }
-        +label {
+        + label {
             background-color: $grey-20;
+            border-radius: 4px;
             cursor: pointer;
             display: block;
             padding: 2rem 1rem;
             text-align: center;
             text-transform: uppercase;
         }
-        +label:hover {
+        + label:hover {
             background: $grey-10;
         }
     }
     .button-group-single {
         flex: 1;
         &:first-child {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
         }
     }
 }
@@ -296,9 +311,9 @@
     input {
         display: none;
         &:checked {
-            +label {
-                background: $primary;
-                transition: background .3s linear;
+            + label {
+                background: $text-hover;
+                transition: background 0.3s linear;
             }
         }
     }
@@ -307,14 +322,15 @@
         border-radius: 5px;
         color: $white;
         display: block;
-        padding: .5rem;
+        padding: 0.5rem;
         &:hover {
-            background: $primary-light;
+            background: $text-hover;
             cursor: pointer;
-            transition: background .3s linear;
+            transition: background 0.3s linear;
         }
     }
     input:checked + label {
-        background-color: $grey-70;
+        background-color: $text-hover;
+        box-shadow: 0 4px 12px transparentize($text-hover, 0.4);
     }
 }

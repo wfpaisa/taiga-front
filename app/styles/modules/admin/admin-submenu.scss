@@ -1,8 +1,6 @@
 .admin-submenu {
     li {
         @include font-type(text);
-        border-bottom: 1px solid $gray-light;
-        text-transform: uppercase;
         &:last-child {
             border-bottom: 0;
         }
@@ -11,7 +9,7 @@
         a {
             display: flex;
             justify-content: space-between;
-            padding: 1rem 0 1rem 1rem;
+            padding: 0.5rem;
             span {
                 display: block;
                 max-width: 85%;
@@ -29,7 +27,7 @@
         display: flex;
         justify-content: center;
         margin: 0 1rem;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         text-align: center;
         &:hover {
             background-color: $blackish;

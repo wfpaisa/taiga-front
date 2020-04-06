@@ -6,7 +6,7 @@
     fieldset {
         label {
             display: inline-block;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
     }
     .new-user-story-title {
@@ -25,22 +25,22 @@
         margin-left: auto;
         input {
             display: none;
-            &:checked+label {
-                background: $primary-light;
+            &:checked + label {
+                background: $text-hover;
                 color: $white;
                 fill: $white;
-                transition: background .2s ease-in;
+                transition: background 0.2s ease-in;
             }
-            +label {
+            + label {
                 background: $mass-white;
                 color: $grayer;
                 cursor: pointer;
                 display: block;
-                padding: .5rem;
-                transition: background .2s ease-in;
+                padding: 0.5rem;
+                transition: background 0.2s ease-in;
             }
-            +label:hover {
-                background: $primary-light;
+            + label:hover {
+                background: $text-hover;
                 color: $white;
                 fill: $white;
             }

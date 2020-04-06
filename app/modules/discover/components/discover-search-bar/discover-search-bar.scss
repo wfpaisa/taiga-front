@@ -22,19 +22,19 @@
         margin: 0 30%;
         position: relative;
         @include until($tablet) {
-            margin: 0 .5rem;
+            margin: 0 0.5rem;
         }
     }
-    input[type="text"] {
+    input[type='text'] {
         background: $white;
         border: 0;
         padding: 1rem;
         width: 100%;
         &:focus {
-            outline-color: $primary-light;
+            outline-color: $text-hover;
         }
         &:-webkit-autofill {
-            background: rgba($primary-dark, .5);
+            background: rgba($primary-dark, 0.5);
         }
     }
     .search-button {
@@ -43,7 +43,7 @@
         position: absolute;
         right: 1rem;
         top: 1rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
         &:hover {
             cursor: pointer;
             fill: $primary;

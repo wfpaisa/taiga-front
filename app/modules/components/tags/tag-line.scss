@@ -6,18 +6,23 @@
 
 .add-tag-button {
     align-content: flex-end;
-    color: $gray-light;
     cursor: pointer;
     display: flex;
-    margin: .5rem 0 0 .25rem;
+
+    background-color: $grey-03;
+    border-radius: 14px;
+    color: $grayer;
+    margin: 0;
+    padding: 0.25rem 1rem 0.25rem 0.6rem;
+
     &:hover {
-        color: $primary-light;
+        color: $text-hover;
     }
     .icon-add {
         fill: currentColor;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
     }
     .add-tag-text {
-        font-size: .9375rem;
+        font-size: 0.9375rem;
     }
 }

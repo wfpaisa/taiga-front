@@ -3,11 +3,11 @@
     &:not(.disabled) {
         cursor: pointer;
         &:hover {
-            color: $primary-light;
+            color: $text-hover;
         }
     }
     &.disabled {
-        opacity: .5;
+        opacity: 0.5;
         &:hover {
             color: $white;
         }

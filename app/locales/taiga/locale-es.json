@@ -321,12 +321,12 @@
     },
     "LOGIN_COMMON": {
         "HEADER": "Ya tengo una cuenta en Taiga",
-        "PLACEHOLDER_AUTH_NAME": "Nombre de usuario o email (distingue mayúsculas y minúsculas)",
+        "PLACEHOLDER_AUTH_NAME": "Nombre de usuario o email",
         "LINK_FORGOT_PASSWORD": "¿La olvidaste?",
         "TITLE_LINK_FORGOT_PASSWORD": "¿Olvidó su contraseña?",
         "ACTION_ENTER": "Entrar",
         "ACTION_SIGN_IN": "Iniciar sesión",
-        "PLACEHOLDER_AUTH_PASSWORD": "Contraseña (distingue mayúsculas y minúsculas)",
+        "PLACEHOLDER_AUTH_PASSWORD": "Contraseña",
         "ALT_LOGIN": "O haz login con"
     },
     "LOGIN_FORM": {
@@ -1466,7 +1466,7 @@
     },
     "NOTIFICATION": {
         "OK": "¡Todo Ok!",
-        "WARNING": "¡Cáspitas!, algo no ha ido bien...",
+        "WARNING": "¡Chanfle!, algo no ha ido bien...",
         "WARNING_TEXT": "¡Tus cambios no han sido guardados!",
         "SAVED": "¡La Taiga ha guardado todos tus cambios!",
         "CLOSE": "Cerrar notificación",

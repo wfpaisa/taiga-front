@@ -1,22 +1,29 @@
 // scss-lint:disable SelectorFormat, QualifyingElement
 
 .introjs-overlay {
-    background: radial-gradient(center, ellipse cover, rgba($white, .2) 0, rgba($whitish, .2) 100%);
+    background: radial-gradient(
+        center,
+        ellipse cover,
+        rgba($white, 0.2) 0,
+        rgba($whitish, 0.2) 100%
+    );
     background-color: $whitish;
 }
 .introjs-helperLayer {
-    border: 1px solid rgba($primary-light, .8);
+    border: 1px solid rgba($text-hover, 0.8);
+    box-shadow: 0 0 6px $text-hover;
+    background: none;
 }
 
 .introjs-helperLayer,
 .introjs-tooltip {
-    box-shadow: 0 1px 8px rgba($grayer, .2);
+    box-shadow: 0 0 6px $text-hover;
 }
 
 .introjs-tooltip {
     h3 {
         @include font-size(large);
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
     p {
         @include font-type(light);
@@ -29,7 +36,7 @@
     ul {
         li {
             a.active {
-                background: $primary-light;
+                background: $text-hover;
             }
         }
     }
@@ -42,12 +49,12 @@
     border-radius: 0;
     color: $white;
     margin-top: 10px;
-    padding: .3rem .8rem;
+    padding: 0.3rem 0.8rem;
     text-shadow: none;
     &:focus,
     &:hover {
         background: none;
-        background-color: $primary-light;
+        background-color: $text-hover;
         color: $white;
     }
     &.introjs-disabled {
