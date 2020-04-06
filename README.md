@@ -2,7 +2,7 @@
 
 ## Fork theme
 
-extract the theme `theme-compile/theme.zip` in `/dist/v-XXXXXX`.
+extract the theme `theme-compile/theme.zip` in `/dist/v-XXXXXX`. or compile the latest version.
 
 <p align="center">
   <img src="theme-compile/screenshot.png" />
